@@ -87,7 +87,7 @@ export const Route = createFileRoute("/resources/$slug")({
 });
 
 function ArticlePage() {
-  const a = Route.useLoaderData();
+  const a = Route.useLoaderData() as Article;
 
   return (
     <div className="dark min-h-screen bg-background text-foreground antialiased">
