@@ -7,10 +7,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { articles } from "@/lib/resources-content";
+import { articles, type Article } from "@/lib/resources-content";
 
 export const Route = createFileRoute("/resources/$slug")({
-  loader: ({ params }) => {
+  loader: ({ params }): Article => {
     const article = articles[params.slug];
     if (!article) throw notFound();
     return article;
