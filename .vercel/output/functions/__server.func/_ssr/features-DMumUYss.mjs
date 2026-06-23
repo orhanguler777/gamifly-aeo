@@ -2,87 +2,87 @@ import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.m
 import { t as Button } from "./button-B2wejuZy.mjs";
 import { g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { C as ArrowRight, a as TrendingUp, d as Plug, f as Medal, g as Gift, h as Globe, i as Trophy, l as Shield, m as Layers, n as Workflow, o as Target, p as LayoutDashboard, s as Swords, t as Zap, v as CircleCheck, x as Bot, y as ChartLine } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/features-BfRqU9He.js
+//#region node_modules/.nitro/vite/services/ssr/assets/features-DMumUYss.js
 var import_jsx_runtime = require_jsx_runtime();
 var highlights = [
 	{
 		icon: Target,
-		title: "Missions & Quests",
-		desc: "Design multi-step missions tied to any player action — bets placed, games tried, deposits made. Real-time progress bars keep players coming back."
+		title: "Auto-Triggered Quests",
+		desc: "Deploy hands-free player missions triggered instantly by real-time events. No manual tracking, no campaign scheduling — completely autonomous onboarding."
 	},
 	{
 		icon: Trophy,
-		title: "Tournaments & Leaderboards",
-		desc: "Launch daily, weekly, or seasonal competitions with live leaderboards that create concentrated bursts of activity and social proof."
+		title: "Self-Running Tournaments",
+		desc: "Run recurring tournament brackets automatically. The system handles opt-in, live scoring updates, and reward payouts without CRM operator intervention."
 	},
 	{
 		icon: Medal,
-		title: "Badges & Levels",
-		desc: "Persistent progression system with XP, levels, and collectible badges that reward tenure and activity — building digital identity players won't abandon."
+		title: "Autonomous Progression",
+		desc: "A hands-off loyalty layer that manages XP, levels, and tier changes in the background, keeping VIP players engaged on autopilot."
 	},
 	{
 		icon: Gift,
-		title: "Rewards Shop",
-		desc: "An in-product shop where players redeem earned points for bonus spins, odds boosts, cashback, or exclusive merchandise — pull, not push."
+		title: "Self-Service Reward Store",
+		desc: "Let players redeem points for bonuses on demand, cutting manual bonus crediting down to zero. Full ledger automation."
 	},
 	{
 		icon: Bot,
-		title: "AI Personalization",
-		desc: "Behavioral signals drive individualized journeys: the right mission, to the right player, at the right moment. No more static CRM segments."
+		title: "Zero-Management AI Tailoring",
+		desc: "Our machine learning engine clusters player habits, auto-assigning targeted quests and optimal rewards individually in real time."
 	},
 	{
 		icon: Workflow,
-		title: "Campaign Automation",
-		desc: "Schedule and automate gamification campaigns from a single console. Reduce CRM workload while increasing touchpoint precision."
+		title: "Set-and-Forget Campaigns",
+		desc: "Design retention streams once. The engine schedules, runs, and A/B tests campaigns in the background with zero daily CRM workload."
 	},
 	{
 		icon: Swords,
-		title: "Cross-Product Engagement",
-		desc: "Unified engine across casino, live casino, and sportsbook. One profile, one progression, one reward wallet — all verticals."
+		title: "Unified Cross-Vertical Engine",
+		desc: "Instantly link slots, live tables, and bet builders under one profile and balance, driving cross-play with zero silo management."
 	},
 	{
 		icon: ChartLine,
-		title: "Analytics & Reporting",
-		desc: "Real-time dashboards on mission completion, retention uplift, activity rates, and revenue per active player — metrics that actually matter."
+		title: "Self-Auditing Yield Dashboard",
+		desc: "Access real-time GGR, deposit cadence, and retention reports. Automatically measures and prints gamification yield on demand."
 	}
 ];
 var deepDives = [
 	{
 		icon: Target,
-		label: "MISSIONS ENGINE",
-		title: "Design missions that drive the behavior you want",
+		label: "ZERO-MANAGEMENT MISSIONS",
+		title: "Auto-assigned player quests with zero operational overhead",
 		points: [
-			"Multi-step, time-bound missions tied to any event in the operator's event stream",
-			"Real-time progress tracking with animated progress bars visible to the player",
-			"Auto-assignment by segment, VIP tier, or AI-driven behavioral profile",
-			"Configurable rewards: bonus spins, points, odds boosts, or custom prizes",
-			"A/B testable — run two mission variants side-by-side and measure uplift"
+			"Set once, run forever: quests are auto-triggered based on direct player activity streams",
+			"Real-time, hands-free progress updates rendered natively inside player lobby",
+			"Automatic reward fulfillment — bonuses, free spins, and loyalty tokens credit instantly",
+			"Zero-configuration onboarding sequences that engage signups without manual CRM steps",
+			"Dynamic automated difficulty scaling that adapts to player skill and stake size"
 		],
 		image: null
 	},
 	{
 		icon: Trophy,
-		label: "TOURNAMENTS",
-		title: "Competitive cycles that reactivate and retain",
+		label: "SELF-RUNNING COMPETITIONS",
+		title: "Automated leaderboard cycles that run without manual updates",
 		points: [
-			"Leaderboards ranked by wagered amount, wins, or any custom metric",
-			"Daily, weekly, monthly, and seasonal tournament cadences",
-			"Prize pool distribution: top-N, percentile-based, or randomized draws",
-			"Opt-in or automatic enrollment based on player activity",
-			"Live countdown timers and position-change animations to drive urgency"
+			"Self-generating daily, weekly, and event-based tournament brackets",
+			"Autonomous leaderboards ranking players by wager, wins, or multipliers in real time",
+			"Hands-free prize distribution: systems split pools and pay top players instantly",
+			"Programmatic segment enrollment based on VIP level, registration date, or vertical affinity",
+			"Automated player notifications detailing rank updates to drive urgency on autopilot"
 		],
 		image: null
 	},
 	{
 		icon: Bot,
-		label: "AI PERSONALIZATION",
-		title: "Every player gets a unique journey",
+		label: "HANDS-FREE OPTIMIZATION",
+		title: "The engine does the thinking, your team gets the margin",
 		points: [
-			"Behavioral clustering: game preference, session timing, bet sizing, churn risk",
-			"Dynamic mission assignment that adapts to real-time player signals",
-			"Predictive churn models trigger retention missions before the player leaves",
-			"Revenue-optimized reward allocation — maximize LTV per reward dollar spent",
-			"Continuous learning loop: the engine gets smarter with every player interaction"
+			"Continuous machine learning models cluster player habits and predict churn indicators",
+			"Algorithmic quest matching that auto-pairs the best margin mission to the right player",
+			"Automated responsible gaming alerts and cohort limits applied programmatically",
+			"Autonomous margin protection — rewards scale down for high-value segments automatically",
+			"No-touch A/B testing: system automatically shifts traffic to highest converting flows"
 		],
 		image: null
 	}
@@ -90,52 +90,52 @@ var deepDives = [
 var integrationSteps = [
 	{
 		step: "01",
-		title: "Connect Events",
-		desc: "Point your bet, deposit, and game-launch event streams at the Gamifly API. Webhooks or Kafka — we support both."
+		title: "Connect Event Broker",
+		desc: "Plug your transactional event stream (Kafka or OpenAPI Webhooks) into our gateway. Simple payload structure."
 	},
 	{
 		step: "02",
-		title: "Configure Mechanics",
-		desc: "Use the operator dashboard to design missions, tournaments, badges, and reward rules — no code required."
+		title: "Set-and-Forget Rules",
+		desc: "Define your global retention rules and reward triggers once. The engine handles execution autonomously."
 	},
 	{
 		step: "03",
-		title: "Embed Widgets",
-		desc: "Drop Gamifly's pre-built UI widgets into your lobby with a single SDK snippet. Fully themeable to match your brand."
+		title: "Auto-Deploy Widgets",
+		desc: "Drop our pre-built SDK widget into your front-end lobby. It renders and scales natively without custom coding."
 	},
 	{
 		step: "04",
-		title: "Go Live & Iterate",
-		desc: "Launch to a player segment, measure the uplift, then scale. Real-time analytics let you iterate in hours, not weeks."
+		title: "Scale Autonomously",
+		desc: "Our AI continuously optimizes campaign triggers, delivering consistent retention yield with zero ongoing maintenance."
 	}
 ];
 var caseStudies = [
 	{
-		metric: "+28%",
-		label: "30-Day Retention Uplift",
-		operatorType: "Tier-1 European Sportsbook",
-		headline: "How a Tier-1 European Sportsbook Achieved a +28% Uplift in 30-Day Player Retention",
-		challenge: "High player acquisition costs (CAC) paired with rapid churn immediately following signup promotions.",
-		solution: "Integrated Gamifly to launch personalized 'Weekly Bet Tournaments' and 'Live Bet Builder Missions' that reward engagement over transaction.",
-		result: "Achieved a +28% lift in 30-day retention cohorts and a +19% increase in average weekly session frequency."
+		metric: "-32%",
+		label: "Bonus Spend Reduction",
+		operatorType: "Tier-1 Sportsbook Operator",
+		headline: "How a Tier-1 Sportsbook Reduced Bonus Spend by 32% While Boosting Player Retention",
+		challenge: "Margin erosion due to high player bonus dependency coupled with a 65% churn rate after signup campaigns.",
+		solution: "Swapped raw push bonuses with Gamifly's auto-triggered sports quests and tournament-based loyalty tokens.",
+		result: "Slashed monthly bonus spend by 32% while generating a +28% uplift in 30-day player retention cohorts."
 	},
 	{
-		metric: "+40%",
-		label: "Higher Quest Completion",
-		operatorType: "Fast-Growing LatAm Casino",
-		headline: "How a Fast-Growing LatAm Casino Brand Generated 40% Higher Quest Completion & +15% ARPU",
-		challenge: "Stagnant player lifetime value (LTV) and low cross-product migration from classic slots to live dealer tables.",
-		solution: "Deployed unified 'Live Casino Quests' and an automated Rewards Shop where points earned on slots could be redeemed for live casino chips.",
-		result: "Drove 40% higher quest completion rates, alongside a +15% increase in Average Revenue Per User (ARPU)."
+		metric: "-24%",
+		label: "VIP Churn Reduction",
+		operatorType: "LatAm Casino Brand",
+		headline: "How a LatAm Casino Operator Cut VIP Churn by 24% & Multiplied Lifetime Value",
+		challenge: "High attrition rates among VIP players and heavy resource drain from manual CRM segment management.",
+		solution: "Implemented Gamifly's AI-managed automated progression layers and dynamic hands-free reward distribution.",
+		result: "Cut VIP segment churn by 24% within 60 days, yielding a 3.5× increase in player lifetime value (LTV)."
 	},
 	{
-		metric: "-22%",
-		label: "Reduction in Player Churn",
-		operatorType: "Multi-Brand Operator Group",
-		headline: "How a Multi-Brand Operator Group Reduced Player Churn by 22% via AI-Driven Journeys",
-		challenge: "High VIP segment churn rates and manual CRM marketing scheduling overhead.",
-		solution: "Used Gamifly's AI Personalization engine to automatically trigger real-time, behavior-based recovery campaigns and retention streaks.",
-		result: "Reduced player churn by 22% within 60 days, yielding a 3.5× increase in campaign conversion efficiency."
+		metric: "+18%",
+		label: "Cross-Product Play Rate",
+		operatorType: "Multi-Vertical Brand",
+		headline: "How a Multi-Vertical Brand Generated a +18% Increase in Cross-Product Play Rate",
+		challenge: "Siloed casino and sportsbook lobby engagement, resulting in low slots play from sports bettor segments.",
+		solution: "Launched unified quests linking sports bet milestones to slot free spins using a single real-time rewards wallet.",
+		result: "Drove an immediate +18% increase in cross-product play rate alongside a +15% lift in average revenue per user (ARPU)."
 	}
 ];
 function FeaturesPage() {

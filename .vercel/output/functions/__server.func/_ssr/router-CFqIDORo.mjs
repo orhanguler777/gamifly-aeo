@@ -4,10 +4,10 @@ import { n as require_jsx_runtime, t as QueryClientProvider } from "../_libs/rea
 import { _ as useRouter, c as HeadContent, d as createRouter, f as Outlet, g as Link, h as createRootRouteWithContext, l as ScrollRestoration, m as createFileRoute, p as lazyRouteComponent, s as Scripts } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as Route$4 } from "./resources_._slug-CxE_wYIR.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-K0XKw4-y.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CFqIDORo.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-CHFO5Ord.css";
+var styles_default = "/assets/styles-MZCJy8cg.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -169,7 +169,7 @@ function RootComponent() {
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})
 	});
 }
-var $$splitComponentImporter$2 = () => import("./features-BfRqU9He.mjs");
+var $$splitComponentImporter$2 = () => import("./features-DMumUYss.mjs");
 var Route$2 = createFileRoute("/features")({
 	head: () => ({
 		meta: [
@@ -231,7 +231,7 @@ var Route$1 = createFileRoute("/")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./resources.index-CqVGcKEx.mjs");
+var $$splitComponentImporter = () => import("./resources.index-CmIiA8-s.mjs");
 var faqs = [
 	{
 		q: "What is iGaming gamification?",
