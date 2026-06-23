@@ -119,7 +119,7 @@ const startHere = [
   },
 ];
 
-export const Route = createFileRoute("/resources")({
+export const Route = createFileRoute("/resources/")({
   head: () => ({
     meta: [
       { title: "Gamifly Resources | iGaming Gamification & Player Retention" },
@@ -200,7 +200,7 @@ function ResourcesPage() {
 
       <main className="container mx-auto max-w-6xl px-6">
         {/* Short answer block (AEO) */}
-        <section aria-label="Overview" className="-mt-10 md:-mt-12">
+        <section aria-label="Overview" className="relative z-10 -mt-10 md:-mt-12">
           <div
             className="rounded-2xl border border-border p-6 shadow-[var(--shadow-card)] md:p-8"
             style={{ background: "var(--gradient-card)" }}

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/accordion";
 import { articles, type Article } from "@/lib/resources-content";
 
-export const Route = createFileRoute("/resources/$slug")({
+export const Route = createFileRoute("/resources_/$slug")({
   loader: ({ params }): Article => {
     const article = articles[params.slug];
     if (!article) throw notFound();
