@@ -4,7 +4,7 @@ import { n as require_jsx_runtime, t as QueryClientProvider } from "../_libs/rea
 import { _ as useRouter, c as HeadContent, d as createRouter, f as Outlet, g as Link, h as createRootRouteWithContext, l as ScrollRestoration, m as createFileRoute, p as lazyRouteComponent, s as Scripts } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as Route$4 } from "./resources_._slug-CxE_wYIR.mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-CFqIDORo.js
+//#region node_modules/.nitro/vite/services/ssr/assets/router-DcP19xhg.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var styles_default = "/assets/styles-MZCJy8cg.css";
@@ -96,22 +96,22 @@ var Route$3 = createRootRouteWithContext()({
 				name: "viewport",
 				content: "width=device-width, initial-scale=1"
 			},
-			{ title: "Lovable App" },
+			{ title: "Gamifly — AI-Powered Gamification for iGaming" },
 			{
 				name: "description",
-				content: "Gamifly Resources is a knowledge hub for iGaming operators to boost player engagement and retention."
+				content: "Gamifly is the API-first gamification engine that helps iGaming operators boost player retention, cut bonus costs, and maximize lifetime value."
 			},
 			{
 				name: "author",
-				content: "Lovable"
+				content: "Gamifly"
 			},
 			{
 				property: "og:title",
-				content: "Lovable App"
+				content: "Gamifly — AI-Powered Gamification for iGaming"
 			},
 			{
 				property: "og:description",
-				content: "Gamifly Resources is a knowledge hub for iGaming operators to boost player engagement and retention."
+				content: "Gamifly is the API-first gamification engine that helps iGaming operators boost player retention, cut bonus costs, and maximize lifetime value."
 			},
 			{
 				property: "og:type",
@@ -123,23 +123,15 @@ var Route$3 = createRootRouteWithContext()({
 			},
 			{
 				name: "twitter:site",
-				content: "@Lovable"
+				content: "@Gamifly"
 			},
 			{
 				name: "twitter:title",
-				content: "Lovable App"
+				content: "Gamifly — AI-Powered Gamification for iGaming"
 			},
 			{
 				name: "twitter:description",
-				content: "Gamifly Resources is a knowledge hub for iGaming operators to boost player engagement and retention."
-			},
-			{
-				property: "og:image",
-				content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/28d92b26-5b0b-475d-9d34-e28455aea608/id-preview-407052dc--2bc14a9e-1f4e-4da0-8e20-d5f64752c357.lovable.app-1782126288027.png"
-			},
-			{
-				name: "twitter:image",
-				content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/28d92b26-5b0b-475d-9d34-e28455aea608/id-preview-407052dc--2bc14a9e-1f4e-4da0-8e20-d5f64752c357.lovable.app-1782126288027.png"
+				content: "Gamifly is the API-first gamification engine that helps iGaming operators boost player retention, cut bonus costs, and maximize lifetime value."
 			}
 		],
 		links: [{
@@ -212,23 +204,37 @@ var Route$2 = createFileRoute("/features")({
 	}),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./routes-_TNdm3Fq.mjs");
+var $$splitComponentImporter$1 = () => import("./routes-2FarXx1e.mjs");
 var Route$1 = createFileRoute("/")({
-	head: () => ({ meta: [
-		{ title: "Your App" },
-		{
-			name: "description",
-			content: "Replace this with a one-sentence description of your app."
-		},
-		{
-			property: "og:title",
-			content: "Your App"
-		},
-		{
-			property: "og:description",
-			content: "Replace this with a one-sentence description of your app."
-		}
-	] }),
+	head: () => ({
+		meta: [
+			{ title: "Gamifly — The AI-Powered Gamification Engine for iGaming Operators" },
+			{
+				name: "description",
+				content: "Gamifly is the API-first gamification platform that helps iGaming operators boost player retention, reduce bonus costs, and maximize LTV through AI-driven missions, tournaments, and rewards."
+			},
+			{
+				property: "og:title",
+				content: "Gamifly — AI-Powered iGaming Gamification Platform"
+			},
+			{
+				property: "og:description",
+				content: "Replace costly bonuses with an intelligent gamification layer. Gamifly deploys personalized missions, tournaments, and reward shops that increase retention and revenue per active player."
+			},
+			{
+				property: "og:type",
+				content: "website"
+			},
+			{
+				property: "og:url",
+				content: "https://gamifly.net/"
+			}
+		],
+		links: [{
+			rel: "canonical",
+			href: "https://gamifly.net/"
+		}]
+	}),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
 var $$splitComponentImporter = () => import("./resources.index-CmIiA8-s.mjs");
