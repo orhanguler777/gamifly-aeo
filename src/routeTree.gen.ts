@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as GamiflyVsSmarticoRouteImport } from './routes/gamifly-vs-smartico'
 import { Route as FeaturesRouteImport } from './routes/features'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
 import { Route as ResourcesSlugRouteImport } from './routes/resources_.$slug'
 
+const GamiflyVsSmarticoRoute = GamiflyVsSmarticoRouteImport.update({
+  id: '/gamifly-vs-smartico',
+  path: '/gamifly-vs-smartico',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FeaturesRoute = FeaturesRouteImport.update({
   id: '/features',
   path: '/features',
@@ -38,12 +44,14 @@ const ResourcesSlugRoute = ResourcesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/features': typeof FeaturesRoute
+  '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/features': typeof FeaturesRoute
+  '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources': typeof ResourcesIndexRoute
 }
@@ -51,26 +59,51 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/features': typeof FeaturesRoute
+  '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/resources_/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/features' | '/resources/$slug' | '/resources/'
+  fullPaths:
+    | '/'
+    | '/features'
+    | '/gamifly-vs-smartico'
+    | '/resources/$slug'
+    | '/resources/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/features' | '/resources/$slug' | '/resources'
-  id: '__root__' | '/' | '/features' | '/resources_/$slug' | '/resources/'
+  to:
+    | '/'
+    | '/features'
+    | '/gamifly-vs-smartico'
+    | '/resources/$slug'
+    | '/resources'
+  id:
+    | '__root__'
+    | '/'
+    | '/features'
+    | '/gamifly-vs-smartico'
+    | '/resources_/$slug'
+    | '/resources/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FeaturesRoute: typeof FeaturesRoute
+  GamiflyVsSmarticoRoute: typeof GamiflyVsSmarticoRoute
   ResourcesSlugRoute: typeof ResourcesSlugRoute
   ResourcesIndexRoute: typeof ResourcesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/gamifly-vs-smartico': {
+      id: '/gamifly-vs-smartico'
+      path: '/gamifly-vs-smartico'
+      fullPath: '/gamifly-vs-smartico'
+      preLoaderRoute: typeof GamiflyVsSmarticoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/features': {
       id: '/features'
       path: '/features'
@@ -105,6 +138,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FeaturesRoute: FeaturesRoute,
+  GamiflyVsSmarticoRoute: GamiflyVsSmarticoRoute,
   ResourcesSlugRoute: ResourcesSlugRoute,
   ResourcesIndexRoute: ResourcesIndexRoute,
 }
