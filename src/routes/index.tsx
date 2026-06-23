@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
 import { Link } from "@tanstack/react-router";
 
 const sitePages = [
-  { group: "Hub", pages: [{ title: "Resources Hub", path: "/resources" }] },
+  { group: "Hub", pages: [{ title: "Resources Hub", path: "/resources" }, { title: "Features", path: "/features" }] },
   {
     group: "Foundational Guides",
     pages: [
