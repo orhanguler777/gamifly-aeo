@@ -134,7 +134,35 @@ const integrationSteps = [
   },
 ];
 
-
+const caseStudies = [
+  {
+    metric: "+28%",
+    label: "30-Day Retention Uplift",
+    operatorType: "Tier-1 European Sportsbook",
+    headline: "How a Tier-1 European Sportsbook Achieved a +28% Uplift in 30-Day Player Retention",
+    challenge: "High player acquisition costs (CAC) paired with rapid churn immediately following signup promotions.",
+    solution: "Integrated Gamifly to launch personalized 'Weekly Bet Tournaments' and 'Live Bet Builder Missions' that reward engagement over transaction.",
+    result: "Achieved a +28% lift in 30-day retention cohorts and a +19% increase in average weekly session frequency."
+  },
+  {
+    metric: "+40%",
+    label: "Higher Quest Completion",
+    operatorType: "Fast-Growing LatAm Casino",
+    headline: "How a Fast-Growing LatAm Casino Brand Generated 40% Higher Quest Completion & +15% ARPU",
+    challenge: "Stagnant player lifetime value (LTV) and low cross-product migration from classic slots to live dealer tables.",
+    solution: "Deployed unified 'Live Casino Quests' and an automated Rewards Shop where points earned on slots could be redeemed for live casino chips.",
+    result: "Drove 40% higher quest completion rates, alongside a +15% increase in Average Revenue Per User (ARPU)."
+  },
+  {
+    metric: "-22%",
+    label: "Reduction in Player Churn",
+    operatorType: "Multi-Brand Operator Group",
+    headline: "How a Multi-Brand Operator Group Reduced Player Churn by 22% via AI-Driven Journeys",
+    challenge: "High VIP segment churn rates and manual CRM marketing scheduling overhead.",
+    solution: "Used Gamifly's AI Personalization engine to automatically trigger real-time, behavior-based recovery campaigns and retention streaks.",
+    result: "Reduced player churn by 22% within 60 days, yielding a 3.5× increase in campaign conversion efficiency."
+  }
+];
 
 /* ------------------------------------------------------------------ */
 /*  Route                                                             */
@@ -403,6 +431,64 @@ function FeaturesPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ─── Micro-Case Studies ─── */}
+        <section className="pb-24" aria-labelledby="case-studies">
+          <div className="mb-14 max-w-2xl">
+            <p className="text-sm font-medium uppercase tracking-wider text-primary">
+              Success Stories
+            </p>
+            <h2 id="case-studies" className="mt-2 text-3xl font-bold md:text-4xl">
+              iGaming Micro-Case Studies
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Discover how sportsbooks and casino operators leverage Gamifly's retention engine to drive significant player engagement and lifetime value.
+            </p>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-3">
+            {caseStudies.map((cs) => (
+              <div
+                key={cs.headline}
+                className="flex flex-col justify-between rounded-3xl border border-border p-8 transition-all hover:border-primary/50 hover:shadow-[var(--shadow-glow)]"
+                style={{ background: "var(--gradient-card)" }}
+              >
+                <div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="text-4xl font-extrabold tracking-tight text-primary">
+                      {cs.metric}
+                    </span>
+                    <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                      {cs.label}
+                    </span>
+                  </div>
+                  <span className="mt-4 inline-block rounded-full bg-primary/10 border border-primary/20 px-2.5 py-0.5 text-xs font-semibold text-primary">
+                    {cs.operatorType}
+                  </span>
+                  <h3 className="mt-4 text-lg font-bold leading-snug text-foreground">
+                    {cs.headline}
+                  </h3>
+                  <div className="mt-6 space-y-4 text-sm">
+                    <div>
+                      <span className="font-semibold text-foreground/90 block">Challenge:</span>
+                      <p className="mt-1 text-muted-foreground leading-relaxed">{cs.challenge}</p>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-foreground/90 block">Solution:</span>
+                      <p className="mt-1 text-muted-foreground leading-relaxed">{cs.solution}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-8 border-t border-border pt-6">
+                  <span className="font-semibold text-primary block text-xs uppercase tracking-wider">Key Result:</span>
+                  <p className="mt-1.5 text-sm font-medium text-foreground leading-relaxed">
+                    {cs.result}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
