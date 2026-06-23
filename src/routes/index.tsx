@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import logo from "@/assets/logo.png";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,7 +26,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+
 function Index() {
   return (
     <div
@@ -34,7 +34,7 @@ function Index() {
       style={{ backgroundColor: "#fcfbf8" }}
     >
       <img
-        src={logo}
+        src="/logo.png"
         alt="Gamifly"
       />
     </div>
