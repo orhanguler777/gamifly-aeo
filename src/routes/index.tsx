@@ -16,10 +16,10 @@ export const Route = createFileRoute("/")({
           "Replace costly bonuses with an intelligent gamification layer. Gamifly deploys personalized missions, tournaments, and reward shops that increase retention and revenue per active player.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://gamifly.co/" },
+      { property: "og:url", content: "https://gamifly.net/" },
     ],
     links: [
-      { rel: "canonical", href: "https://gamifly.co/" },
+      { rel: "canonical", href: "https://gamifly.net/" },
     ],
   }),
   component: Index,
