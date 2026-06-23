@@ -403,18 +403,55 @@ function ResourcesPage() {
           </div>
 
           <div className="space-y-6">
-            {faqs.map((f) => (
-              <div
-                key={f.q}
-                className="rounded-2xl border border-border p-6 md:p-8"
-                style={{ background: "var(--gradient-card)" }}
-              >
-                <h3 className="text-base font-semibold md:text-lg">{f.q}</h3>
-                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                  {f.a}
-                </p>
-              </div>
-            ))}
+            <div
+              className="rounded-2xl border border-border p-6 md:p-8"
+              style={{ background: "var(--gradient-card)" }}
+            >
+              <h3 className="text-base font-semibold md:text-lg">What is iGaming gamification?</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                iGaming gamification is the use of missions, campaigns, badges, tournaments, leaderboards, levels, rewards, progress mechanics, and personalized journeys inside casino and sportsbook platforms to increase player engagement, activity, retention, and lifetime value.
+              </p>
+            </div>
+
+            <div
+              className="rounded-2xl border border-border p-6 md:p-8"
+              style={{ background: "var(--gradient-card)" }}
+            >
+              <h3 className="text-base font-semibold md:text-lg">Why do iGaming operators need gamification?</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                iGaming operators use gamification to increase session frequency, retention, product differentiation, cross-product activity, and player lifetime value (LTV) while reducing marketing bonus dependency and player acquisition costs.
+              </p>
+            </div>
+
+            <div
+              className="rounded-2xl border border-border p-6 md:p-8"
+              style={{ background: "var(--gradient-card)" }}
+            >
+              <h3 className="text-base font-semibold md:text-lg">How does gamification improve player retention?</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Gamification builds structural retention loops. Daily missions, progression levels, tournament cycles, and personalized streaks give players clear, rewarding goals to return tomorrow, improving 7-day, 30-day, and 90-day retention cohorts.
+              </p>
+            </div>
+
+            <div
+              className="rounded-2xl border border-border p-6 md:p-8"
+              style={{ background: "var(--gradient-card)" }}
+            >
+              <h3 className="text-base font-semibold md:text-lg">Can gamification work for both casino and sportsbook?</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Yes. Gamification is vertical-agnostic. For casinos, it powers slots challenges and live-dealer tournaments. For sportsbooks, it powers bet-builder missions, live-betting streaks, and multi-sport leaderboard campaigns.
+              </p>
+            </div>
+
+            <div
+              className="rounded-2xl border border-border p-6 md:p-8"
+              style={{ background: "var(--gradient-card)" }}
+            >
+              <h3 className="text-base font-semibold md:text-lg">How does Gamifly help operators?</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Gamifly is an AI-powered gamification engine that connects to casino and sportsbook platforms via API/SDK. It enables product, CRM, and marketing teams to configure and launch real-time missions, campaigns, tournaments, badges, and loyalty shops from a single dashboard without development overhead.
+              </p>
+            </div>
           </div>
         </section>
 
