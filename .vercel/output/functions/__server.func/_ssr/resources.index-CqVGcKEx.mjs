@@ -1,8 +1,11 @@
+import { r as __toESM } from "../_runtime.mjs";
+import { n as require_react } from "../_libs/@radix-ui/react-compose-refs+[...].mjs";
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { t as Button } from "./button-B2wejuZy.mjs";
 import { g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { C as ArrowRight, S as BookOpen, T as Activity, _ as Dice5, b as Building2, c as Sparkles, d as Plug, i as Trophy, o as Target, r as Users, u as Rocket, v as CircleCheck } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/resources.index-Dwp-MbLb.js
+//#region node_modules/.nitro/vite/services/ssr/assets/resources.index-CqVGcKEx.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var categories = [
 	{
@@ -104,6 +107,207 @@ var startHere = [
 		desc: "The product, tech, and CRM checklist for a clean rollout — from wallet integration to AI journeys."
 	}
 ];
+function ROICalculator() {
+	const [mau, setMau] = (0, import_react.useState)(5e4);
+	const [arpu, setArpu] = (0, import_react.useState)(100);
+	const [bonusRatio, setBonusRatio] = (0, import_react.useState)(25);
+	const [retention, setRetention] = (0, import_react.useState)(15);
+	const ggr = mau * arpu;
+	const bonusSpend = ggr * (bonusRatio / 100);
+	const projectedGgrLift = ggr * (retention * .25 / 100) * .4;
+	const savedBonusCost = bonusSpend * .15;
+	const totalAnnualValue = (projectedGgrLift + savedBonusCost) * 12;
+	const formatCurrency = (val) => {
+		return new Intl.NumberFormat("en-DE", {
+			style: "currency",
+			currency: "EUR",
+			maximumFractionDigits: 0
+		}).format(val);
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "py-20 border-y border-border",
+		"aria-labelledby": "roi-calc-title",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "mb-12 text-center md:text-left",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-sm font-medium uppercase tracking-wider text-primary",
+					children: "Interactive Tool"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					id: "roi-calc-title",
+					className: "mt-2 text-3xl font-bold md:text-4xl",
+					children: "iGaming Gamification ROI Calculator"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-4 text-muted-foreground max-w-2xl",
+					children: "Estimate the annual revenue lift and bonus margin savings you can unlock by replacing generic player bonuses with Gamifly's gamified retention loops."
+				})
+			]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "grid gap-8 lg:grid-cols-12",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "lg:col-span-7 space-y-6 rounded-2xl border border-border p-6 md:p-8 bg-card/40 backdrop-blur",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+						className: "text-lg font-semibold text-foreground border-b border-border pb-3",
+						children: "Input Operator Metrics"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex justify-between mb-2",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+							htmlFor: "mau-input",
+							className: "text-sm font-medium text-muted-foreground",
+							children: "Monthly Active Users (MAU)"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-sm font-semibold text-foreground",
+							children: mau.toLocaleString()
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+						id: "mau-input",
+						type: "range",
+						min: "5000",
+						max: "500000",
+						step: "5000",
+						value: mau,
+						onChange: (e) => setMau(Number(e.target.value)),
+						className: "w-full accent-primary bg-muted rounded-lg h-2 cursor-pointer"
+					})] }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex justify-between mb-2",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+							htmlFor: "arpu-input",
+							className: "text-sm font-medium text-muted-foreground",
+							children: "Average Monthly Deposit (ARPU)"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							className: "text-sm font-semibold text-foreground",
+							children: formatCurrency(arpu)
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+						id: "arpu-input",
+						type: "range",
+						min: "10",
+						max: "1000",
+						step: "10",
+						value: arpu,
+						onChange: (e) => setArpu(Number(e.target.value)),
+						className: "w-full accent-primary bg-muted rounded-lg h-2 cursor-pointer"
+					})] }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex justify-between mb-2",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+							htmlFor: "bonus-ratio-input",
+							className: "text-sm font-medium text-muted-foreground",
+							children: "Current Monthly Bonus/GGR Ratio"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+							className: "text-sm font-semibold text-foreground",
+							children: [bonusRatio, "%"]
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+						id: "bonus-ratio-input",
+						type: "range",
+						min: "5",
+						max: "50",
+						step: "1",
+						value: bonusRatio,
+						onChange: (e) => setBonusRatio(Number(e.target.value)),
+						className: "w-full accent-primary bg-muted rounded-lg h-2 cursor-pointer"
+					})] }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex justify-between mb-2",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", {
+							htmlFor: "retention-input",
+							className: "text-sm font-medium text-muted-foreground",
+							children: "Current 30-Day Player Retention"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+							className: "text-sm font-semibold text-foreground",
+							children: [retention, "%"]
+						})]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+						id: "retention-input",
+						type: "range",
+						min: "5",
+						max: "40",
+						step: "1",
+						value: retention,
+						onChange: (e) => setRetention(Number(e.target.value)),
+						className: "w-full accent-primary bg-muted rounded-lg h-2 cursor-pointer"
+					})] })
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "lg:col-span-5 flex flex-col justify-between rounded-2xl border border-border p-6 md:p-8 relative overflow-hidden",
+				style: { background: "var(--gradient-card)" },
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "absolute -right-10 -bottom-10 w-40 h-40 rounded-full opacity-20 blur-3xl pointer-events-none",
+						style: { background: "var(--gradient-brand)" }
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "text-lg font-semibold text-foreground border-b border-border pb-3",
+								children: "Projected Annual Yield"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "mt-6 space-y-4",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex justify-between items-center py-2 border-b border-border/30",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-sm text-muted-foreground",
+										children: "Annual Bonus Waste Saved"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "text-base font-semibold text-emerald-400",
+										children: ["+", formatCurrency(savedBonusCost * 12)]
+									})]
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex justify-between items-center py-2 border-b border-border/30",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-sm text-muted-foreground",
+										children: "Annual Retention Revenue Uplift"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+										className: "text-base font-semibold text-emerald-400",
+										children: ["+", formatCurrency(projectedGgrLift * 12)]
+									})]
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "mt-8 text-center bg-background/50 rounded-xl p-4 border border-border/50",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "text-xs uppercase tracking-wider text-muted-foreground font-semibold",
+									children: "Total Growth Potential"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "text-3xl md:text-4xl font-extrabold mt-2 bg-clip-text text-transparent",
+									style: { backgroundImage: "var(--gradient-brand)" },
+									children: formatCurrency(totalAnnualValue)
+								})]
+							})
+						]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mt-8 relative z-10",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
+							asChild: true,
+							className: "w-full border-0 text-primary-foreground shadow-[var(--shadow-glow)] py-6 text-sm font-semibold rounded-xl",
+							style: { background: "var(--gradient-brand)" },
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+								href: `/contact?source=roi-calc&value=${Math.round(totalAnnualValue)}`,
+								children: [
+									"Claim Your Custom ",
+									formatCurrency(totalAnnualValue),
+									" Blueprint"
+								]
+							})
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "text-[10px] text-muted-foreground text-center mt-3",
+							children: "Calculations based on standard European and LatAm iGaming operator performance data."
+						})]
+					})
+				]
+			})]
+		})]
+	});
+}
 function ResourcesPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 		className: "dark min-h-screen bg-background text-foreground antialiased",
@@ -278,6 +482,7 @@ function ResourcesPage() {
 						}, item.slug))
 					})]
 				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ROICalculator, {}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 					className: "py-20",
 					"aria-labelledby": "quick-answers",
@@ -422,6 +627,50 @@ function ResourcesPage() {
 									className: "mt-3 text-base leading-relaxed text-muted-foreground",
 									children: "Gamifly is an AI-powered gamification engine that connects to casino and sportsbook platforms via API/SDK. It enables product, CRM, and marketing teams to configure and launch real-time missions, campaigns, tournaments, badges, and loyalty shops from a single dashboard without development overhead."
 								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-border p-6 md:p-8",
+								style: { background: "var(--gradient-card)" },
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-base font-semibold md:text-lg",
+									children: "How does Gamifly handle wallet integration and transaction security?"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-base leading-relaxed text-muted-foreground",
+									children: "Gamifly operates as a non-custodial engagement layer, meaning we do not touch, hold, or process player funds directly. Integration is handled via secure seamless wallet APIs or transactional webhooks. The operator retains 100% control over player balances, while Gamifly simply listens to game/bet event streams and triggers rewards, ensuring zero impact on transaction latency or financial integrity."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-border p-6 md:p-8",
+								style: { background: "var(--gradient-card)" },
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-base font-semibold md:text-lg",
+									children: "What is the technical integration overhead and required dev resources?"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-base leading-relaxed text-muted-foreground",
+									children: "Minimal. Gamifly is built on an API-first, event-driven architecture. By consuming your existing event streams (via Kafka, WebSockets, or OpenAPI-compliant REST webhooks), we require zero changes to your core game server logic. Most operators go live with a single engineer in less than 3 weeks using our pre-built lobby widgets and comprehensive SDKs."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-border p-6 md:p-8",
+								style: { background: "var(--gradient-card)" },
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-base font-semibold md:text-lg",
+									children: "How does the platform ensure compliance in strictly regulated jurisdictions (e.g. UKGC, MGA, DGOJ)?"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-base leading-relaxed text-muted-foreground",
+									children: "Compliance is built into our core rules engine. Gamifly features geography-aware configuration profiles. You can restrict specific mechanics (like randomized reward boxes or live leaderboards) in jurisdictions where they are classified as lottery or require specific licensing, and fully automate age-gated limits and responsible gaming controls in real time."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-border p-6 md:p-8",
+								style: { background: "var(--gradient-card)" },
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-base font-semibold md:text-lg",
+									children: "Can Gamifly handle high-volume traffic spike loads during major sporting events?"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-base leading-relaxed text-muted-foreground",
+									children: "Yes. Our engine is built to scale horizontally using a cloud-native, distributed event broker system (Kafka) capable of processing over 50,000 game-bet events per second with sub-100ms response times. Whether it is a Premier League Sunday or the World Cup final, player progression, leaderboard rankings, and reward triggers hydrate instantly without degrading your platform's core performance."
+								})]
 							})
 						]
 					})]
@@ -440,11 +689,11 @@ function ResourcesPage() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 								id: "cta",
 								className: "relative text-3xl font-bold tracking-tight md:text-5xl",
-								children: "Ready to turn player engagement into a platform layer?"
+								children: "Stop Burning Margin on Bonuses. Make Your lobby Sticky."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "relative mx-auto mt-5 max-w-2xl text-lg text-muted-foreground",
-								children: "Gamifly helps operators build missions, campaigns, badges, tournaments, rewards, and personalized journeys into their casino and sportsbook experience."
+								children: "Stop letting player acquisition leak through immediate churn. Integrate Gamifly's API-first gamification engine in weeks to build habit-forming loyalty loops players won't abandon — without engineering overhead."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "relative mt-8 flex flex-wrap justify-center gap-3",
@@ -455,7 +704,7 @@ function ResourcesPage() {
 									style: { background: "var(--gradient-brand)" },
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 										href: "/contact",
-										children: "Book a Demo"
+										children: "Book Retention Audit & Demo"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 									asChild: true,
@@ -464,7 +713,7 @@ function ResourcesPage() {
 									className: "bg-card/40 backdrop-blur",
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 										href: "/features",
-										children: "Explore Gamifly Features"
+										children: "Explore Features"
 									})
 								})]
 							})

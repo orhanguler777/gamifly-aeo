@@ -2,7 +2,7 @@ import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.m
 import { t as Button } from "./button-B2wejuZy.mjs";
 import { g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { C as ArrowRight, a as TrendingUp, d as Plug, f as Medal, g as Gift, h as Globe, i as Trophy, l as Shield, m as Layers, n as Workflow, o as Target, p as LayoutDashboard, s as Swords, t as Zap, v as CircleCheck, x as Bot, y as ChartLine } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/features-Dy8d_iiw.js
+//#region node_modules/.nitro/vite/services/ssr/assets/features-BfRqU9He.js
 var import_jsx_runtime = require_jsx_runtime();
 var highlights = [
 	{
@@ -107,6 +107,35 @@ var integrationSteps = [
 		step: "04",
 		title: "Go Live & Iterate",
 		desc: "Launch to a player segment, measure the uplift, then scale. Real-time analytics let you iterate in hours, not weeks."
+	}
+];
+var caseStudies = [
+	{
+		metric: "+28%",
+		label: "30-Day Retention Uplift",
+		operatorType: "Tier-1 European Sportsbook",
+		headline: "How a Tier-1 European Sportsbook Achieved a +28% Uplift in 30-Day Player Retention",
+		challenge: "High player acquisition costs (CAC) paired with rapid churn immediately following signup promotions.",
+		solution: "Integrated Gamifly to launch personalized 'Weekly Bet Tournaments' and 'Live Bet Builder Missions' that reward engagement over transaction.",
+		result: "Achieved a +28% lift in 30-day retention cohorts and a +19% increase in average weekly session frequency."
+	},
+	{
+		metric: "+40%",
+		label: "Higher Quest Completion",
+		operatorType: "Fast-Growing LatAm Casino",
+		headline: "How a Fast-Growing LatAm Casino Brand Generated 40% Higher Quest Completion & +15% ARPU",
+		challenge: "Stagnant player lifetime value (LTV) and low cross-product migration from classic slots to live dealer tables.",
+		solution: "Deployed unified 'Live Casino Quests' and an automated Rewards Shop where points earned on slots could be redeemed for live casino chips.",
+		result: "Drove 40% higher quest completion rates, alongside a +15% increase in Average Revenue Per User (ARPU)."
+	},
+	{
+		metric: "-22%",
+		label: "Reduction in Player Churn",
+		operatorType: "Multi-Brand Operator Group",
+		headline: "How a Multi-Brand Operator Group Reduced Player Churn by 22% via AI-Driven Journeys",
+		challenge: "High VIP segment churn rates and manual CRM marketing scheduling overhead.",
+		solution: "Used Gamifly's AI Personalization engine to automatically trigger real-time, behavior-based recovery campaigns and retention streaks.",
+		result: "Reduced player churn by 22% within 60 days, yielding a 3.5× increase in campaign conversion efficiency."
 	}
 ];
 function FeaturesPage() {
@@ -344,6 +373,79 @@ function FeaturesPage() {
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 					className: "pb-24",
+					"aria-labelledby": "case-studies",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "mb-14 max-w-2xl",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "text-sm font-medium uppercase tracking-wider text-primary",
+								children: "Success Stories"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+								id: "case-studies",
+								className: "mt-2 text-3xl font-bold md:text-4xl",
+								children: "iGaming Micro-Case Studies"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-4 text-muted-foreground",
+								children: "Discover how sportsbooks and casino operators leverage Gamifly's retention engine to drive significant player engagement and lifetime value."
+							})
+						]
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "grid gap-8 lg:grid-cols-3",
+						children: caseStudies.map((cs) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "flex flex-col justify-between rounded-3xl border border-border p-8 transition-all hover:border-primary/50 hover:shadow-[var(--shadow-glow)]",
+							style: { background: "var(--gradient-card)" },
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "flex items-baseline gap-2",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-4xl font-extrabold tracking-tight text-primary",
+										children: cs.metric
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "text-xs font-semibold uppercase tracking-wider text-muted-foreground",
+										children: cs.label
+									})]
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "mt-4 inline-block rounded-full bg-primary/10 border border-primary/20 px-2.5 py-0.5 text-xs font-semibold text-primary",
+									children: cs.operatorType
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "mt-4 text-lg font-bold leading-snug text-foreground",
+									children: cs.headline
+								}),
+								/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+									className: "mt-6 space-y-4 text-sm",
+									children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "font-semibold text-foreground/90 block",
+										children: "Challenge:"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-1 text-muted-foreground leading-relaxed",
+										children: cs.challenge
+									})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "font-semibold text-foreground/90 block",
+										children: "Solution:"
+									}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+										className: "mt-1 text-muted-foreground leading-relaxed",
+										children: cs.solution
+									})] })]
+								})
+							] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "mt-8 border-t border-border pt-6",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									className: "font-semibold text-primary block text-xs uppercase tracking-wider",
+									children: "Key Result:"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-1.5 text-sm font-medium text-foreground leading-relaxed",
+									children: cs.result
+								})]
+							})]
+						}, cs.headline))
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+					className: "pb-24",
 					"aria-labelledby": "integration",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "mb-14 max-w-2xl",
@@ -470,11 +572,11 @@ function FeaturesPage() {
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 								id: "features-cta",
 								className: "relative text-3xl font-bold tracking-tight md:text-5xl",
-								children: "Ready to turn engagement into a platform layer?"
+								children: "Stop Burning Margin on Bonuses. Make Your Lobby Sticky."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 								className: "relative mx-auto mt-5 max-w-2xl text-lg text-muted-foreground",
-								children: "See how Gamifly can integrate into your casino or sportsbook platform. Schedule a personalized walkthrough with our team."
+								children: "Stop letting player acquisition leak through immediate churn. Integrate Gamifly's API-first gamification engine in weeks to build habit-forming loyalty loops players won't abandon — without engineering overhead."
 							}),
 							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 								className: "relative mt-8 flex flex-wrap justify-center gap-3",
@@ -485,7 +587,7 @@ function FeaturesPage() {
 									style: { background: "var(--gradient-brand)" },
 									children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 										href: "/contact",
-										children: "Book a Demo"
+										children: "Book Retention Audit & Demo"
 									})
 								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Button, {
 									asChild: true,
