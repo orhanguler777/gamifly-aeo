@@ -149,7 +149,7 @@ function GamificationVsCrmPage() {
             >
               <h3 className="text-xl font-bold text-foreground">What are CRM bonus campaigns?</h3>
               <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                CRM (Customer Relationship Management) campaigns are the traditional backbone of iGaming marketing. They involve segmenting players and sending out push notifications, emails, or SMS messages offering direct incentives. Examples include: "Deposit €50 today and get 50 Free Spins," or "Here is a 10% weekend cashback." They are highly effective for acquisition and immediate reactivation but train players to only play when a bonus is offered.
+                CRM (Customer Relationship Management) campaigns are the traditional backbone of iGaming marketing. They involve segmenting players and sending out push notifications, emails, or SMS messages offering direct incentives. Examples include: "Deposit €50 today and get 50 Free Spins," or "Here is a 10% weekend cashback." They can be effective for acquisition and immediate reactivation but train players to only play when a bonus is offered.
               </p>
             </div>
             <div

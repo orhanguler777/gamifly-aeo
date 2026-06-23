@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "How does Gamifly handle high-volume events like slot spins?",
-    a: "Gamifly is built on an event-driven architecture (using Kafka/RabbitMQ). It is designed to consume tens of thousands of concurrent events per second, processing casino rounds and updating live leaderboards with sub-100ms latency.",
+    a: "Gamifly is built on an event-driven architecture (using Kafka/RabbitMQ). It is designed to consume tens of thousands of concurrent events per second, processing casino rounds and updating live leaderboards with low latency.",
   },
   {
     q: "Do we have to build the UI for the missions?",
@@ -108,7 +108,7 @@ function IntegrationFlowPage() {
             How does Gamifly integrate with an iGaming platform?
           </h2>
           <p className="mt-3 text-base leading-relaxed text-foreground/90">
-            Gamifly integrates via a decoupled, API-first architecture. The operator's Player Account Management (PAM) system streams real-time player actions (spins, bets, deposits) to Gamifly via Kafka, RabbitMQ, or REST Webhooks. Gamifly's rule engine instantly calculates mission progress and leaderboard rankings, pushing outbound webhooks back to the operator to issue rewards, while simultaneously updating front-end Web Components injected into the casino lobby.
+            Gamifly integrates via a decoupled, API-first architecture. The operator's Player Account Management (PAM) system streams real-time player actions (spins, bets, deposits) to Gamifly via Kafka, RabbitMQ, or REST Webhooks. Gamifly's rule engine calculates mission progress and leaderboard rankings in real-time, pushing outbound webhooks back to the operator to issue rewards, while simultaneously updating front-end Web Components injected into the casino lobby.
           </p>
         </section>
 
@@ -225,7 +225,7 @@ function IntegrationFlowPage() {
               </li>
               <li className="flex gap-3 text-sm text-muted-foreground leading-relaxed">
                 <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary font-bold">2</div>
-                <span><strong>Resolution (Gamifly-to-Frontend):</strong> Gamifly's rule engine processes the event and pushes UI state updates directly to the player's browser/app via WebSockets or polling, creating instant visual feedback.</span>
+                <span><strong>Resolution (Gamifly-to-Frontend):</strong> Gamifly's rule engine processes the event and pushes UI state updates directly to the player's browser/app via WebSockets or polling, creating prompt visual feedback.</span>
               </li>
               <li className="flex gap-3 text-sm text-muted-foreground leading-relaxed">
                 <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary font-bold">3</div>
@@ -246,7 +246,7 @@ function IntegrationFlowPage() {
               Because Gamifly triggers financial rewards, security is paramount. All outbound webhook requests from Gamifly to the operator's PAM are cryptographically signed (HMAC-SHA256) ensuring request authenticity.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Data Privacy: Gamifly does not require PII (names, emails, passwords). We operate entirely on anonymized Player IDs or Hash IDs. This guarantees GDPR compliance and simplifies regulatory data processing requirements.
+              Data Privacy: Gamifly does not require PII (names, emails, passwords). We operate entirely on anonymized Player IDs or Hash IDs. This supports GDPR compliance and simplifies regulatory data processing requirements.
             </p>
           </div>
         </section>

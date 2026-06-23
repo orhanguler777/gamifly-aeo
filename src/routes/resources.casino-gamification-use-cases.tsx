@@ -100,7 +100,7 @@ const faqs = [
   },
   {
     q: "How long does it take to set up a new mission?",
-    a: "With a modern gamification engine, launching a new mission takes minutes. Operators select the trigger event (e.g., 'Bet Placed'), the target game, the threshold, and the reward in a no-code dashboard.",
+    a: "With a modern gamification engine, launching a new mission can be done quickly. Operators select the trigger event (e.g., 'Bet Placed'), the target game, the threshold, and the reward in a no-code dashboard.",
   },
 ];
 
@@ -191,9 +191,9 @@ function CasinoUseCasesPage() {
           <ul className="mt-6 grid gap-4 md:grid-cols-2">
             {[
               "Gamification solves the 'game discovery' problem for massive casino lobbies.",
-              "Missions guarantee turnover (GGR) before rewards are issued, protecting margins.",
-              "Cross-selling from slots to live casino is highly effective with targeted missions.",
-              "Gamifly provides an API-first engine to execute all these use cases instantly.",
+              "Missions are designed to require wagering activity before rewards are issued, helping protect margins.",
+              "Cross-selling from slots to live casino can be driven by targeted missions.",
+              "Gamifly provides an API-first engine to execute all these use cases promptly.",
             ].map((t, i) => (
               <li key={i} className="flex gap-3 text-base text-muted-foreground">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
@@ -303,7 +303,7 @@ function CasinoUseCasesPage() {
         <section className="py-12 border-t border-border">
           <h2 className="text-3xl font-bold tracking-tight">How Gamifly Supports Casino Gamification</h2>
           <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-            Gamifly provides an API-first gamification engine that connects directly to your casino wallet or game aggregation platform (via Kafka or Webhooks). This allows Gamifly to process spins, bets, wins, and losses in real-time with sub-100ms latency. Operators use the Gamifly back-office to instantly deploy missions, configure tournament rules, and manage virtual coin economies without needing to write a single line of code or submit IT tickets.
+            Gamifly provides an API-first gamification engine that connects directly to your casino wallet or game aggregation platform (via Kafka or Webhooks). This allows Gamifly to process spins, bets, wins, and losses in real-time with low latency. Operators use the Gamifly back-office to promptly deploy missions, configure tournament rules, and manage virtual coin economies without needing to write code or submit IT tickets.
           </p>
         </section>
 

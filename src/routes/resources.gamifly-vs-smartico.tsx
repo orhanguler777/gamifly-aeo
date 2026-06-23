@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     q: "How long does it take to integrate Gamifly vs Smartico?",
-    a: "Because Gamifly is an API-first, modular platform focused purely on gamification, integration typically takes 14-21 days using existing wallet event streams. Platforms with heavier CRM dependencies may require longer integration timelines depending on legacy system complexity.",
+    a: "Because Gamifly is an API-first, modular platform focused purely on gamification, integration typically takes a few weeks using existing wallet event streams. Platforms with heavier CRM dependencies may require longer integration timelines depending on legacy system complexity.",
   },
   {
     q: "Can both platforms handle sportsbooks and casinos?",
@@ -209,8 +209,8 @@ function VsSmarticoPage() {
                 </tr>
                 <tr>
                   <td className="p-4 font-medium">Time to Launch</td>
-                  <td className="p-4 text-muted-foreground">14-21 Days (Modular)</td>
-                  <td className="p-4 text-muted-foreground">Months (System overhaul)</td>
+                  <td className="p-4 text-muted-foreground">Weeks (Modular)</td>
+                  <td className="p-4 text-muted-foreground">Often longer (Heavier integration)</td>
                 </tr>
               </tbody>
             </table>
