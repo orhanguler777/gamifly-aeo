@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as GamiflyVsSmarticoRouteImport } from './routes/gamifly-vs-smartico'
+import { Route as GamiflyVsFutureAnthemRouteImport } from './routes/gamifly-vs-future-anthem'
 import { Route as FeaturesRouteImport } from './routes/features'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
@@ -18,6 +19,11 @@ import { Route as ResourcesSlugRouteImport } from './routes/resources_.$slug'
 const GamiflyVsSmarticoRoute = GamiflyVsSmarticoRouteImport.update({
   id: '/gamifly-vs-smartico',
   path: '/gamifly-vs-smartico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GamiflyVsFutureAnthemRoute = GamiflyVsFutureAnthemRouteImport.update({
+  id: '/gamifly-vs-future-anthem',
+  path: '/gamifly-vs-future-anthem',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FeaturesRoute = FeaturesRouteImport.update({
@@ -44,6 +50,7 @@ const ResourcesSlugRoute = ResourcesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/features': typeof FeaturesRoute
+  '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
@@ -51,6 +58,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/features': typeof FeaturesRoute
+  '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources': typeof ResourcesIndexRoute
@@ -59,6 +67,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/features': typeof FeaturesRoute
+  '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/resources_/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
@@ -68,6 +77,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/features'
+    | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
     | '/resources/$slug'
     | '/resources/'
@@ -75,6 +85,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/features'
+    | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
     | '/resources/$slug'
     | '/resources'
@@ -82,6 +93,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/features'
+    | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
     | '/resources_/$slug'
     | '/resources/'
@@ -90,6 +102,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FeaturesRoute: typeof FeaturesRoute
+  GamiflyVsFutureAnthemRoute: typeof GamiflyVsFutureAnthemRoute
   GamiflyVsSmarticoRoute: typeof GamiflyVsSmarticoRoute
   ResourcesSlugRoute: typeof ResourcesSlugRoute
   ResourcesIndexRoute: typeof ResourcesIndexRoute
@@ -102,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/gamifly-vs-smartico'
       fullPath: '/gamifly-vs-smartico'
       preLoaderRoute: typeof GamiflyVsSmarticoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gamifly-vs-future-anthem': {
+      id: '/gamifly-vs-future-anthem'
+      path: '/gamifly-vs-future-anthem'
+      fullPath: '/gamifly-vs-future-anthem'
+      preLoaderRoute: typeof GamiflyVsFutureAnthemRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/features': {
@@ -138,6 +158,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FeaturesRoute: FeaturesRoute,
+  GamiflyVsFutureAnthemRoute: GamiflyVsFutureAnthemRoute,
   GamiflyVsSmarticoRoute: GamiflyVsSmarticoRoute,
   ResourcesSlugRoute: ResourcesSlugRoute,
   ResourcesIndexRoute: ResourcesIndexRoute,
