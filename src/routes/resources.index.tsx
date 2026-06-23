@@ -13,12 +13,6 @@ import {
   Rocket,
   CheckCircle2,
 } from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 
 const faqs = [
@@ -329,22 +323,19 @@ function ResourcesPage() {
             </h2>
           </div>
 
-          <div
-            className="rounded-2xl border border-border p-2 md:p-4"
-            style={{ background: "var(--gradient-card)" }}
-          >
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((f, i) => (
-                <AccordionItem key={f.q} value={`item-${i}`} className="border-border px-4">
-                  <AccordionTrigger className="text-left text-base font-semibold hover:no-underline md:text-lg">
-                    {f.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-base text-muted-foreground">
-                    {f.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          <div className="space-y-6">
+            {faqs.map((f) => (
+              <div
+                key={f.q}
+                className="rounded-2xl border border-border p-6 md:p-8"
+                style={{ background: "var(--gradient-card)" }}
+              >
+                <h3 className="text-base font-semibold md:text-lg">{f.q}</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  {f.a}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 

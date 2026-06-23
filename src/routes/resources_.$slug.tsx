@@ -1,12 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { articles, type Article } from "@/lib/resources-content";
 
 export const Route = createFileRoute("/resources_/$slug")({
@@ -179,22 +173,19 @@ function ArticlePage() {
           <h2 id="article-faq" className="text-2xl font-bold tracking-tight md:text-3xl">
             Frequently asked questions
           </h2>
-          <div
-            className="mt-6 rounded-2xl border border-border p-2 md:p-4"
-            style={{ background: "var(--gradient-card)" }}
-          >
-            <Accordion type="single" collapsible className="w-full">
-              {a.faq.map((f, i) => (
-                <AccordionItem key={f.q} value={`faq-${i}`} className="border-border px-4">
-                  <AccordionTrigger className="text-left text-base font-semibold hover:no-underline">
-                    {f.q}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-base text-muted-foreground">
-                    {f.a}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          <div className="mt-6 space-y-6">
+            {a.faq.map((f) => (
+              <div
+                key={f.q}
+                className="rounded-2xl border border-border p-6 md:p-8"
+                style={{ background: "var(--gradient-card)" }}
+              >
+                <h3 className="text-base font-semibold md:text-lg">{f.q}</h3>
+                <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  {f.a}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
