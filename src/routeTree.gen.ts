@@ -9,63 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SportsbookGamificationUseCasesRouteImport } from './routes/sportsbook-gamification-use-cases'
-import { Route as IgamingGamificationVsCrmBonusCampaignsRouteImport } from './routes/igaming-gamification-vs-crm-bonus-campaigns'
-import { Route as GamiflyVsSmarticoRouteImport } from './routes/gamifly-vs-smartico'
-import { Route as GamiflyVsFutureAnthemRouteImport } from './routes/gamifly-vs-future-anthem'
-import { Route as GamiflyApiIntegrationFlowRouteImport } from './routes/gamifly-api-integration-flow'
 import { Route as FeaturesRouteImport } from './routes/features'
-import { Route as CrossProductMissionsInIgamingRouteImport } from './routes/cross-product-missions-in-igaming'
-import { Route as CasinoGamificationUseCasesRouteImport } from './routes/casino-gamification-use-cases'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
 import { Route as ResourcesSlugRouteImport } from './routes/resources_.$slug'
+import { Route as ResourcesSportsbookGamificationUseCasesRouteImport } from './routes/resources.sportsbook-gamification-use-cases'
+import { Route as ResourcesSampleIgamingGamificationEventPayloadRouteImport } from './routes/resources.sample-igaming-gamification-event-payload'
+import { Route as ResourcesGamiflyVsSmarticoRouteImport } from './routes/resources.gamifly-vs-smartico'
+import { Route as ResourcesGamiflyVsFutureAnthemRouteImport } from './routes/resources.gamifly-vs-future-anthem'
+import { Route as ResourcesGamiflyDemoScreenshotsRouteImport } from './routes/resources.gamifly-demo-screenshots'
+import { Route as ResourcesGamiflyApiIntegrationFlowRouteImport } from './routes/resources.gamifly-api-integration-flow'
+import { Route as ResourcesGamificationVsCrmBonusCampaignsRouteImport } from './routes/resources.gamification-vs-crm-bonus-campaigns'
+import { Route as ResourcesCrossProductMissionsExamplesRouteImport } from './routes/resources.cross-product-missions-examples'
+import { Route as ResourcesCasinoGamificationUseCasesRouteImport } from './routes/resources.casino-gamification-use-cases'
+import { Route as ResourcesAnonymousOperatorGamificationCaseStudyRouteImport } from './routes/resources.anonymous-operator-gamification-case-study'
 
-const SportsbookGamificationUseCasesRoute =
-  SportsbookGamificationUseCasesRouteImport.update({
-    id: '/sportsbook-gamification-use-cases',
-    path: '/sportsbook-gamification-use-cases',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const IgamingGamificationVsCrmBonusCampaignsRoute =
-  IgamingGamificationVsCrmBonusCampaignsRouteImport.update({
-    id: '/igaming-gamification-vs-crm-bonus-campaigns',
-    path: '/igaming-gamification-vs-crm-bonus-campaigns',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const GamiflyVsSmarticoRoute = GamiflyVsSmarticoRouteImport.update({
-  id: '/gamifly-vs-smartico',
-  path: '/gamifly-vs-smartico',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GamiflyVsFutureAnthemRoute = GamiflyVsFutureAnthemRouteImport.update({
-  id: '/gamifly-vs-future-anthem',
-  path: '/gamifly-vs-future-anthem',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const GamiflyApiIntegrationFlowRoute =
-  GamiflyApiIntegrationFlowRouteImport.update({
-    id: '/gamifly-api-integration-flow',
-    path: '/gamifly-api-integration-flow',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const FeaturesRoute = FeaturesRouteImport.update({
   id: '/features',
   path: '/features',
   getParentRoute: () => rootRouteImport,
 } as any)
-const CrossProductMissionsInIgamingRoute =
-  CrossProductMissionsInIgamingRouteImport.update({
-    id: '/cross-product-missions-in-igaming',
-    path: '/cross-product-missions-in-igaming',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const CasinoGamificationUseCasesRoute =
-  CasinoGamificationUseCasesRouteImport.update({
-    id: '/casino-gamification-use-cases',
-    path: '/casino-gamification-use-cases',
-    getParentRoute: () => rootRouteImport,
-  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -81,44 +44,113 @@ const ResourcesSlugRoute = ResourcesSlugRouteImport.update({
   path: '/resources/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ResourcesSportsbookGamificationUseCasesRoute =
+  ResourcesSportsbookGamificationUseCasesRouteImport.update({
+    id: '/resources/sportsbook-gamification-use-cases',
+    path: '/resources/sportsbook-gamification-use-cases',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesSampleIgamingGamificationEventPayloadRoute =
+  ResourcesSampleIgamingGamificationEventPayloadRouteImport.update({
+    id: '/resources/sample-igaming-gamification-event-payload',
+    path: '/resources/sample-igaming-gamification-event-payload',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesGamiflyVsSmarticoRoute =
+  ResourcesGamiflyVsSmarticoRouteImport.update({
+    id: '/resources/gamifly-vs-smartico',
+    path: '/resources/gamifly-vs-smartico',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesGamiflyVsFutureAnthemRoute =
+  ResourcesGamiflyVsFutureAnthemRouteImport.update({
+    id: '/resources/gamifly-vs-future-anthem',
+    path: '/resources/gamifly-vs-future-anthem',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesGamiflyDemoScreenshotsRoute =
+  ResourcesGamiflyDemoScreenshotsRouteImport.update({
+    id: '/resources/gamifly-demo-screenshots',
+    path: '/resources/gamifly-demo-screenshots',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesGamiflyApiIntegrationFlowRoute =
+  ResourcesGamiflyApiIntegrationFlowRouteImport.update({
+    id: '/resources/gamifly-api-integration-flow',
+    path: '/resources/gamifly-api-integration-flow',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesGamificationVsCrmBonusCampaignsRoute =
+  ResourcesGamificationVsCrmBonusCampaignsRouteImport.update({
+    id: '/resources/gamification-vs-crm-bonus-campaigns',
+    path: '/resources/gamification-vs-crm-bonus-campaigns',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesCrossProductMissionsExamplesRoute =
+  ResourcesCrossProductMissionsExamplesRouteImport.update({
+    id: '/resources/cross-product-missions-examples',
+    path: '/resources/cross-product-missions-examples',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesCasinoGamificationUseCasesRoute =
+  ResourcesCasinoGamificationUseCasesRouteImport.update({
+    id: '/resources/casino-gamification-use-cases',
+    path: '/resources/casino-gamification-use-cases',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ResourcesAnonymousOperatorGamificationCaseStudyRoute =
+  ResourcesAnonymousOperatorGamificationCaseStudyRouteImport.update({
+    id: '/resources/anonymous-operator-gamification-case-study',
+    path: '/resources/anonymous-operator-gamification-case-study',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/casino-gamification-use-cases': typeof CasinoGamificationUseCasesRoute
-  '/cross-product-missions-in-igaming': typeof CrossProductMissionsInIgamingRoute
   '/features': typeof FeaturesRoute
-  '/gamifly-api-integration-flow': typeof GamiflyApiIntegrationFlowRoute
-  '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
-  '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
-  '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
-  '/sportsbook-gamification-use-cases': typeof SportsbookGamificationUseCasesRoute
+  '/resources/anonymous-operator-gamification-case-study': typeof ResourcesAnonymousOperatorGamificationCaseStudyRoute
+  '/resources/casino-gamification-use-cases': typeof ResourcesCasinoGamificationUseCasesRoute
+  '/resources/cross-product-missions-examples': typeof ResourcesCrossProductMissionsExamplesRoute
+  '/resources/gamification-vs-crm-bonus-campaigns': typeof ResourcesGamificationVsCrmBonusCampaignsRoute
+  '/resources/gamifly-api-integration-flow': typeof ResourcesGamiflyApiIntegrationFlowRoute
+  '/resources/gamifly-demo-screenshots': typeof ResourcesGamiflyDemoScreenshotsRoute
+  '/resources/gamifly-vs-future-anthem': typeof ResourcesGamiflyVsFutureAnthemRoute
+  '/resources/gamifly-vs-smartico': typeof ResourcesGamiflyVsSmarticoRoute
+  '/resources/sample-igaming-gamification-event-payload': typeof ResourcesSampleIgamingGamificationEventPayloadRoute
+  '/resources/sportsbook-gamification-use-cases': typeof ResourcesSportsbookGamificationUseCasesRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/casino-gamification-use-cases': typeof CasinoGamificationUseCasesRoute
-  '/cross-product-missions-in-igaming': typeof CrossProductMissionsInIgamingRoute
   '/features': typeof FeaturesRoute
-  '/gamifly-api-integration-flow': typeof GamiflyApiIntegrationFlowRoute
-  '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
-  '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
-  '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
-  '/sportsbook-gamification-use-cases': typeof SportsbookGamificationUseCasesRoute
+  '/resources/anonymous-operator-gamification-case-study': typeof ResourcesAnonymousOperatorGamificationCaseStudyRoute
+  '/resources/casino-gamification-use-cases': typeof ResourcesCasinoGamificationUseCasesRoute
+  '/resources/cross-product-missions-examples': typeof ResourcesCrossProductMissionsExamplesRoute
+  '/resources/gamification-vs-crm-bonus-campaigns': typeof ResourcesGamificationVsCrmBonusCampaignsRoute
+  '/resources/gamifly-api-integration-flow': typeof ResourcesGamiflyApiIntegrationFlowRoute
+  '/resources/gamifly-demo-screenshots': typeof ResourcesGamiflyDemoScreenshotsRoute
+  '/resources/gamifly-vs-future-anthem': typeof ResourcesGamiflyVsFutureAnthemRoute
+  '/resources/gamifly-vs-smartico': typeof ResourcesGamiflyVsSmarticoRoute
+  '/resources/sample-igaming-gamification-event-payload': typeof ResourcesSampleIgamingGamificationEventPayloadRoute
+  '/resources/sportsbook-gamification-use-cases': typeof ResourcesSportsbookGamificationUseCasesRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources': typeof ResourcesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/casino-gamification-use-cases': typeof CasinoGamificationUseCasesRoute
-  '/cross-product-missions-in-igaming': typeof CrossProductMissionsInIgamingRoute
   '/features': typeof FeaturesRoute
-  '/gamifly-api-integration-flow': typeof GamiflyApiIntegrationFlowRoute
-  '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
-  '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
-  '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
-  '/sportsbook-gamification-use-cases': typeof SportsbookGamificationUseCasesRoute
+  '/resources/anonymous-operator-gamification-case-study': typeof ResourcesAnonymousOperatorGamificationCaseStudyRoute
+  '/resources/casino-gamification-use-cases': typeof ResourcesCasinoGamificationUseCasesRoute
+  '/resources/cross-product-missions-examples': typeof ResourcesCrossProductMissionsExamplesRoute
+  '/resources/gamification-vs-crm-bonus-campaigns': typeof ResourcesGamificationVsCrmBonusCampaignsRoute
+  '/resources/gamifly-api-integration-flow': typeof ResourcesGamiflyApiIntegrationFlowRoute
+  '/resources/gamifly-demo-screenshots': typeof ResourcesGamiflyDemoScreenshotsRoute
+  '/resources/gamifly-vs-future-anthem': typeof ResourcesGamiflyVsFutureAnthemRoute
+  '/resources/gamifly-vs-smartico': typeof ResourcesGamiflyVsSmarticoRoute
+  '/resources/sample-igaming-gamification-event-payload': typeof ResourcesSampleIgamingGamificationEventPayloadRoute
+  '/resources/sportsbook-gamification-use-cases': typeof ResourcesSportsbookGamificationUseCasesRoute
   '/resources_/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
 }
@@ -126,114 +158,77 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/casino-gamification-use-cases'
-    | '/cross-product-missions-in-igaming'
     | '/features'
-    | '/gamifly-api-integration-flow'
-    | '/gamifly-vs-future-anthem'
-    | '/gamifly-vs-smartico'
-    | '/igaming-gamification-vs-crm-bonus-campaigns'
-    | '/sportsbook-gamification-use-cases'
+    | '/resources/anonymous-operator-gamification-case-study'
+    | '/resources/casino-gamification-use-cases'
+    | '/resources/cross-product-missions-examples'
+    | '/resources/gamification-vs-crm-bonus-campaigns'
+    | '/resources/gamifly-api-integration-flow'
+    | '/resources/gamifly-demo-screenshots'
+    | '/resources/gamifly-vs-future-anthem'
+    | '/resources/gamifly-vs-smartico'
+    | '/resources/sample-igaming-gamification-event-payload'
+    | '/resources/sportsbook-gamification-use-cases'
     | '/resources/$slug'
     | '/resources/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/casino-gamification-use-cases'
-    | '/cross-product-missions-in-igaming'
     | '/features'
-    | '/gamifly-api-integration-flow'
-    | '/gamifly-vs-future-anthem'
-    | '/gamifly-vs-smartico'
-    | '/igaming-gamification-vs-crm-bonus-campaigns'
-    | '/sportsbook-gamification-use-cases'
+    | '/resources/anonymous-operator-gamification-case-study'
+    | '/resources/casino-gamification-use-cases'
+    | '/resources/cross-product-missions-examples'
+    | '/resources/gamification-vs-crm-bonus-campaigns'
+    | '/resources/gamifly-api-integration-flow'
+    | '/resources/gamifly-demo-screenshots'
+    | '/resources/gamifly-vs-future-anthem'
+    | '/resources/gamifly-vs-smartico'
+    | '/resources/sample-igaming-gamification-event-payload'
+    | '/resources/sportsbook-gamification-use-cases'
     | '/resources/$slug'
     | '/resources'
   id:
     | '__root__'
     | '/'
-    | '/casino-gamification-use-cases'
-    | '/cross-product-missions-in-igaming'
     | '/features'
-    | '/gamifly-api-integration-flow'
-    | '/gamifly-vs-future-anthem'
-    | '/gamifly-vs-smartico'
-    | '/igaming-gamification-vs-crm-bonus-campaigns'
-    | '/sportsbook-gamification-use-cases'
+    | '/resources/anonymous-operator-gamification-case-study'
+    | '/resources/casino-gamification-use-cases'
+    | '/resources/cross-product-missions-examples'
+    | '/resources/gamification-vs-crm-bonus-campaigns'
+    | '/resources/gamifly-api-integration-flow'
+    | '/resources/gamifly-demo-screenshots'
+    | '/resources/gamifly-vs-future-anthem'
+    | '/resources/gamifly-vs-smartico'
+    | '/resources/sample-igaming-gamification-event-payload'
+    | '/resources/sportsbook-gamification-use-cases'
     | '/resources_/$slug'
     | '/resources/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  CasinoGamificationUseCasesRoute: typeof CasinoGamificationUseCasesRoute
-  CrossProductMissionsInIgamingRoute: typeof CrossProductMissionsInIgamingRoute
   FeaturesRoute: typeof FeaturesRoute
-  GamiflyApiIntegrationFlowRoute: typeof GamiflyApiIntegrationFlowRoute
-  GamiflyVsFutureAnthemRoute: typeof GamiflyVsFutureAnthemRoute
-  GamiflyVsSmarticoRoute: typeof GamiflyVsSmarticoRoute
-  IgamingGamificationVsCrmBonusCampaignsRoute: typeof IgamingGamificationVsCrmBonusCampaignsRoute
-  SportsbookGamificationUseCasesRoute: typeof SportsbookGamificationUseCasesRoute
+  ResourcesAnonymousOperatorGamificationCaseStudyRoute: typeof ResourcesAnonymousOperatorGamificationCaseStudyRoute
+  ResourcesCasinoGamificationUseCasesRoute: typeof ResourcesCasinoGamificationUseCasesRoute
+  ResourcesCrossProductMissionsExamplesRoute: typeof ResourcesCrossProductMissionsExamplesRoute
+  ResourcesGamificationVsCrmBonusCampaignsRoute: typeof ResourcesGamificationVsCrmBonusCampaignsRoute
+  ResourcesGamiflyApiIntegrationFlowRoute: typeof ResourcesGamiflyApiIntegrationFlowRoute
+  ResourcesGamiflyDemoScreenshotsRoute: typeof ResourcesGamiflyDemoScreenshotsRoute
+  ResourcesGamiflyVsFutureAnthemRoute: typeof ResourcesGamiflyVsFutureAnthemRoute
+  ResourcesGamiflyVsSmarticoRoute: typeof ResourcesGamiflyVsSmarticoRoute
+  ResourcesSampleIgamingGamificationEventPayloadRoute: typeof ResourcesSampleIgamingGamificationEventPayloadRoute
+  ResourcesSportsbookGamificationUseCasesRoute: typeof ResourcesSportsbookGamificationUseCasesRoute
   ResourcesSlugRoute: typeof ResourcesSlugRoute
   ResourcesIndexRoute: typeof ResourcesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sportsbook-gamification-use-cases': {
-      id: '/sportsbook-gamification-use-cases'
-      path: '/sportsbook-gamification-use-cases'
-      fullPath: '/sportsbook-gamification-use-cases'
-      preLoaderRoute: typeof SportsbookGamificationUseCasesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/igaming-gamification-vs-crm-bonus-campaigns': {
-      id: '/igaming-gamification-vs-crm-bonus-campaigns'
-      path: '/igaming-gamification-vs-crm-bonus-campaigns'
-      fullPath: '/igaming-gamification-vs-crm-bonus-campaigns'
-      preLoaderRoute: typeof IgamingGamificationVsCrmBonusCampaignsRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gamifly-vs-smartico': {
-      id: '/gamifly-vs-smartico'
-      path: '/gamifly-vs-smartico'
-      fullPath: '/gamifly-vs-smartico'
-      preLoaderRoute: typeof GamiflyVsSmarticoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gamifly-vs-future-anthem': {
-      id: '/gamifly-vs-future-anthem'
-      path: '/gamifly-vs-future-anthem'
-      fullPath: '/gamifly-vs-future-anthem'
-      preLoaderRoute: typeof GamiflyVsFutureAnthemRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/gamifly-api-integration-flow': {
-      id: '/gamifly-api-integration-flow'
-      path: '/gamifly-api-integration-flow'
-      fullPath: '/gamifly-api-integration-flow'
-      preLoaderRoute: typeof GamiflyApiIntegrationFlowRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/features': {
       id: '/features'
       path: '/features'
       fullPath: '/features'
       preLoaderRoute: typeof FeaturesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cross-product-missions-in-igaming': {
-      id: '/cross-product-missions-in-igaming'
-      path: '/cross-product-missions-in-igaming'
-      fullPath: '/cross-product-missions-in-igaming'
-      preLoaderRoute: typeof CrossProductMissionsInIgamingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/casino-gamification-use-cases': {
-      id: '/casino-gamification-use-cases'
-      path: '/casino-gamification-use-cases'
-      fullPath: '/casino-gamification-use-cases'
-      preLoaderRoute: typeof CasinoGamificationUseCasesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -257,20 +252,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ResourcesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/resources/sportsbook-gamification-use-cases': {
+      id: '/resources/sportsbook-gamification-use-cases'
+      path: '/resources/sportsbook-gamification-use-cases'
+      fullPath: '/resources/sportsbook-gamification-use-cases'
+      preLoaderRoute: typeof ResourcesSportsbookGamificationUseCasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/sample-igaming-gamification-event-payload': {
+      id: '/resources/sample-igaming-gamification-event-payload'
+      path: '/resources/sample-igaming-gamification-event-payload'
+      fullPath: '/resources/sample-igaming-gamification-event-payload'
+      preLoaderRoute: typeof ResourcesSampleIgamingGamificationEventPayloadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/gamifly-vs-smartico': {
+      id: '/resources/gamifly-vs-smartico'
+      path: '/resources/gamifly-vs-smartico'
+      fullPath: '/resources/gamifly-vs-smartico'
+      preLoaderRoute: typeof ResourcesGamiflyVsSmarticoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/gamifly-vs-future-anthem': {
+      id: '/resources/gamifly-vs-future-anthem'
+      path: '/resources/gamifly-vs-future-anthem'
+      fullPath: '/resources/gamifly-vs-future-anthem'
+      preLoaderRoute: typeof ResourcesGamiflyVsFutureAnthemRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/gamifly-demo-screenshots': {
+      id: '/resources/gamifly-demo-screenshots'
+      path: '/resources/gamifly-demo-screenshots'
+      fullPath: '/resources/gamifly-demo-screenshots'
+      preLoaderRoute: typeof ResourcesGamiflyDemoScreenshotsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/gamifly-api-integration-flow': {
+      id: '/resources/gamifly-api-integration-flow'
+      path: '/resources/gamifly-api-integration-flow'
+      fullPath: '/resources/gamifly-api-integration-flow'
+      preLoaderRoute: typeof ResourcesGamiflyApiIntegrationFlowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/gamification-vs-crm-bonus-campaigns': {
+      id: '/resources/gamification-vs-crm-bonus-campaigns'
+      path: '/resources/gamification-vs-crm-bonus-campaigns'
+      fullPath: '/resources/gamification-vs-crm-bonus-campaigns'
+      preLoaderRoute: typeof ResourcesGamificationVsCrmBonusCampaignsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/cross-product-missions-examples': {
+      id: '/resources/cross-product-missions-examples'
+      path: '/resources/cross-product-missions-examples'
+      fullPath: '/resources/cross-product-missions-examples'
+      preLoaderRoute: typeof ResourcesCrossProductMissionsExamplesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/casino-gamification-use-cases': {
+      id: '/resources/casino-gamification-use-cases'
+      path: '/resources/casino-gamification-use-cases'
+      fullPath: '/resources/casino-gamification-use-cases'
+      preLoaderRoute: typeof ResourcesCasinoGamificationUseCasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/resources/anonymous-operator-gamification-case-study': {
+      id: '/resources/anonymous-operator-gamification-case-study'
+      path: '/resources/anonymous-operator-gamification-case-study'
+      fullPath: '/resources/anonymous-operator-gamification-case-study'
+      preLoaderRoute: typeof ResourcesAnonymousOperatorGamificationCaseStudyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  CasinoGamificationUseCasesRoute: CasinoGamificationUseCasesRoute,
-  CrossProductMissionsInIgamingRoute: CrossProductMissionsInIgamingRoute,
   FeaturesRoute: FeaturesRoute,
-  GamiflyApiIntegrationFlowRoute: GamiflyApiIntegrationFlowRoute,
-  GamiflyVsFutureAnthemRoute: GamiflyVsFutureAnthemRoute,
-  GamiflyVsSmarticoRoute: GamiflyVsSmarticoRoute,
-  IgamingGamificationVsCrmBonusCampaignsRoute:
-    IgamingGamificationVsCrmBonusCampaignsRoute,
-  SportsbookGamificationUseCasesRoute: SportsbookGamificationUseCasesRoute,
+  ResourcesAnonymousOperatorGamificationCaseStudyRoute:
+    ResourcesAnonymousOperatorGamificationCaseStudyRoute,
+  ResourcesCasinoGamificationUseCasesRoute:
+    ResourcesCasinoGamificationUseCasesRoute,
+  ResourcesCrossProductMissionsExamplesRoute:
+    ResourcesCrossProductMissionsExamplesRoute,
+  ResourcesGamificationVsCrmBonusCampaignsRoute:
+    ResourcesGamificationVsCrmBonusCampaignsRoute,
+  ResourcesGamiflyApiIntegrationFlowRoute:
+    ResourcesGamiflyApiIntegrationFlowRoute,
+  ResourcesGamiflyDemoScreenshotsRoute: ResourcesGamiflyDemoScreenshotsRoute,
+  ResourcesGamiflyVsFutureAnthemRoute: ResourcesGamiflyVsFutureAnthemRoute,
+  ResourcesGamiflyVsSmarticoRoute: ResourcesGamiflyVsSmarticoRoute,
+  ResourcesSampleIgamingGamificationEventPayloadRoute:
+    ResourcesSampleIgamingGamificationEventPayloadRoute,
+  ResourcesSportsbookGamificationUseCasesRoute:
+    ResourcesSportsbookGamificationUseCasesRoute,
   ResourcesSlugRoute: ResourcesSlugRoute,
   ResourcesIndexRoute: ResourcesIndexRoute,
 }

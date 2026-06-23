@@ -1,7 +1,7 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { t as Button } from "./button-B2wejuZy.mjs";
 import { g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { C as ArrowRight, a as TrendingUp, d as Plug, f as Medal, g as Gift, h as Globe, i as Trophy, l as Shield, m as Layers, n as Workflow, o as Target, p as LayoutDashboard, s as Swords, t as Zap, v as CircleCheck, x as Bot, y as ChartLine } from "../_libs/lucide-react.mjs";
+import { C as CircleCheck, E as Bot, O as ArrowRight, _ as Layers, a as TrendingUp, b as Gift, f as Plug, g as LayoutDashboard, i as Trophy, l as Shield, m as Medal, n as Workflow, o as Target, s as Swords, t as Zap, w as ChartLine, y as Globe } from "../_libs/lucide-react.mjs";
 //#region node_modules/.nitro/vite/services/ssr/assets/features-DMumUYss.js
 var import_jsx_runtime = require_jsx_runtime();
 var highlights = [

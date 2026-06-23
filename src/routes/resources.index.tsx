@@ -106,6 +106,95 @@ const startHere = [
   },
 ];
 
+const comparisonGuides = [
+  {
+    title: "Gamifly vs Smartico",
+    category: "Comparison Guide",
+    description:
+      "Compare Gamifly and Smartico for iGaming gamification, CRM automation, missions, tournaments, rewards, and player retention.",
+    href: "/resources/gamifly-vs-smartico",
+    readingTime: "7 min read",
+  },
+  {
+    title: "Gamifly vs Future Anthem",
+    category: "Comparison Guide",
+    description:
+      "Understand the difference between a gamification execution engine and AI player personalization for iGaming operators.",
+    href: "/resources/gamifly-vs-future-anthem",
+    readingTime: "7 min read",
+  },
+  {
+    title: "Gamification vs CRM Bonus Campaigns",
+    category: "Strategy Guide",
+    description:
+      "Learn when operators should use gamification, CRM bonus campaigns, or both together to improve retention and reduce bonus dependency.",
+    href: "/resources/gamification-vs-crm-bonus-campaigns",
+    readingTime: "8 min read",
+  },
+];
+
+const useCaseGuides = [
+  {
+    title: "Casino Gamification Use Cases",
+    category: "Use Case Guide",
+    description:
+      "Explore practical casino gamification examples for missions, slot discovery, provider challenges, streaks, tournaments, and VIP journeys.",
+    href: "/resources/casino-gamification-use-cases",
+    readingTime: "8 min read",
+  },
+  {
+    title: "Sportsbook Gamification Use Cases",
+    category: "Use Case Guide",
+    description:
+      "See how sportsbook operators can use matchday missions, accumulator challenges, prediction streaks, and live betting engagement campaigns.",
+    href: "/resources/sportsbook-gamification-use-cases",
+    readingTime: "8 min read",
+  },
+  {
+    title: "Cross-Product Missions in iGaming",
+    category: "Use Case Guide",
+    description:
+      "Learn how multi-vertical operators can connect casino, sportsbook, live casino, and other products through cross-product missions.",
+    href: "/resources/cross-product-missions-examples",
+    readingTime: "7 min read",
+  },
+];
+
+const technicalGuides = [
+  {
+    title: "Gamifly API Integration Flow",
+    category: "Technical Guide",
+    description:
+      "A business-friendly technical guide explaining how Gamifly connects with player data, event streams, wallet systems, CRM tools, and front-end widgets.",
+    href: "/resources/gamifly-api-integration-flow",
+    readingTime: "9 min read",
+  },
+  {
+    title: "Sample iGaming Gamification Event Payloads",
+    category: "Technical Guide",
+    description:
+      "Review illustrative JSON event payloads for player registration, deposits, casino bets, sportsbook bets, mission completion, and reward issuing.",
+    href: "/resources/sample-igaming-gamification-event-payload",
+    readingTime: "9 min read",
+  },
+  {
+    title: "Gamifly Demo Screenshots",
+    category: "Demo Guide",
+    description:
+      "See example product views for missions, tournaments, badges, rewards, segmentation, analytics, and front-end player widgets.",
+    href: "/resources/gamifly-demo-screenshots",
+    readingTime: "5 min read",
+  },
+  {
+    title: "Anonymous Operator Gamification Case Study",
+    category: "Case Study",
+    description:
+      "An illustrative operator scenario showing how gamification can reduce dependency on blanket bonus campaigns and improve player engagement.",
+    href: "/resources/anonymous-operator-gamification-case-study",
+    readingTime: "7 min read",
+  },
+];
+
 export const Route = createFileRoute("/resources/")({
   head: () => ({
     meta: [
@@ -468,6 +557,132 @@ function ResourcesPage() {
                   >
                     <Link to="/resources/$slug" params={{ slug: item.slug }}>
                       Read more
+                      <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  </Button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Comparison Guides */}
+        <section className="py-20" aria-labelledby="comparison-guides">
+          <div className="mb-10">
+            <p className="text-sm font-medium uppercase tracking-wider text-primary">
+              Competitor Analysis
+            </p>
+            <h2 id="comparison-guides" className="mt-2 text-3xl font-bold md:text-4xl">
+              Comparison Guides
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {comparisonGuides.map((item) => (
+              <article
+                key={item.href}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border transition-all hover:border-primary/50 hover:shadow-[var(--shadow-glow)]"
+                style={{ background: "var(--gradient-card)" }}
+              >
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+                      {item.category}
+                    </span>
+                    <span className="text-xs text-muted-foreground">{item.readingTime}</span>
+                  </div>
+                  <h3 className="mt-4 text-xl font-semibold leading-snug">{item.title}</h3>
+                  <p className="mt-3 flex-1 text-sm text-muted-foreground">{item.description}</p>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="mt-6 w-fit -ml-3 text-primary hover:bg-primary/10 hover:text-primary"
+                  >
+                    <Link to={item.href}>
+                      Read guide
+                      <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  </Button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Use Cases */}
+        <section className="py-20 border-t border-border" aria-labelledby="use-case-guides">
+          <div className="mb-10">
+            <p className="text-sm font-medium uppercase tracking-wider text-primary">
+              Playbooks
+            </p>
+            <h2 id="use-case-guides" className="mt-2 text-3xl font-bold md:text-4xl">
+              Use Cases
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {useCaseGuides.map((item) => (
+              <article
+                key={item.href}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border transition-all hover:border-primary/50 hover:shadow-[var(--shadow-glow)]"
+                style={{ background: "var(--gradient-card)" }}
+              >
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+                      {item.category}
+                    </span>
+                    <span className="text-xs text-muted-foreground">{item.readingTime}</span>
+                  </div>
+                  <h3 className="mt-4 text-xl font-semibold leading-snug">{item.title}</h3>
+                  <p className="mt-3 flex-1 text-sm text-muted-foreground">{item.description}</p>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="mt-6 w-fit -ml-3 text-primary hover:bg-primary/10 hover:text-primary"
+                  >
+                    <Link to={item.href}>
+                      Read guide
+                      <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  </Button>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Technical Guides */}
+        <section className="py-20 border-t border-border" aria-labelledby="technical-guides">
+          <div className="mb-10">
+            <p className="text-sm font-medium uppercase tracking-wider text-primary">
+              Documentation
+            </p>
+            <h2 id="technical-guides" className="mt-2 text-3xl font-bold md:text-4xl">
+              Technical Guides
+            </h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+            {technicalGuides.map((item) => (
+              <article
+                key={item.href}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border transition-all hover:border-primary/50 hover:shadow-[var(--shadow-glow)]"
+                style={{ background: "var(--gradient-card)" }}
+              >
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">
+                      {item.category}
+                    </span>
+                    <span className="text-xs text-muted-foreground">{item.readingTime}</span>
+                  </div>
+                  <h3 className="mt-4 text-xl font-semibold leading-snug">{item.title}</h3>
+                  <p className="mt-3 flex-1 text-sm text-muted-foreground">{item.description}</p>
+                  <Button
+                    asChild
+                    variant="ghost"
+                    className="mt-6 w-fit -ml-3 text-primary hover:bg-primary/10 hover:text-primary"
+                  >
+                    <Link to={item.href}>
+                      Read guide
                       <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                     </Link>
                   </Button>

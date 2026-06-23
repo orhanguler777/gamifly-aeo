@@ -1,0 +1,49 @@
+{
+  "redirects": [
+    {
+      "source": "/gamifly-vs-smartico",
+      "destination": "/resources/gamifly-vs-smartico",
+      "permanent": true
+    },
+    {
+      "source": "/gamifly-vs-future-anthem",
+      "destination": "/resources/gamifly-vs-future-anthem",
+      "permanent": true
+    },
+    {
+      "source": "/gamification-vs-crm-bonus-campaigns",
+      "destination": "/resources/gamification-vs-crm-bonus-campaigns",
+      "permanent": true
+    },
+    {
+      "source": "/igaming-gamification-vs-crm-bonus-campaigns",
+      "destination": "/resources/gamification-vs-crm-bonus-campaigns",
+      "permanent": true
+    },
+    {
+      "source": "/casino-gamification-use-cases",
+      "destination": "/resources/casino-gamification-use-cases",
+      "permanent": true
+    },
+    {
+      "source": "/sportsbook-gamification-use-cases",
+      "destination": "/resources/sportsbook-gamification-use-cases",
+      "permanent": true
+    },
+    {
+      "source": "/cross-product-missions-examples",
+      "destination": "/resources/cross-product-missions-examples",
+      "permanent": true
+    },
+    {
+      "source": "/cross-product-missions-in-igaming",
+      "destination": "/resources/cross-product-missions-examples",
+      "permanent": true
+    },
+    {
+      "source": "/gamifly-api-integration-flow",
+      "destination": "/resources/gamifly-api-integration-flow",
+      "permanent": true
+    }
+  ]
+}
