@@ -2,8 +2,7 @@ import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.m
 import { t as Button } from "./button-B2wejuZy.mjs";
 import { g as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { C as ArrowRight, S as BookOpen, T as Activity, _ as Dice5, b as Building2, c as Sparkles, d as Plug, i as Trophy, o as Target, r as Users, u as Rocket, v as CircleCheck } from "../_libs/lucide-react.mjs";
-import { t as faqs } from "./resources.index-hApBsKhR.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/resources.index-BYlD9xfl.js
+//#region node_modules/.nitro/vite/services/ssr/assets/resources.index-Dwp-MbLb.js
 var import_jsx_runtime = require_jsx_runtime();
 var categories = [
 	{
@@ -366,19 +365,65 @@ function ResourcesPage() {
 							className: "mt-2 text-3xl font-bold md:text-4xl",
 							children: "Common questions from operators"
 						})]
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "space-y-6",
-						children: faqs.map((f) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "rounded-2xl border border-border p-6 md:p-8",
-							style: { background: "var(--gradient-card)" },
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "text-base font-semibold md:text-lg",
-								children: f.q
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-3 text-base leading-relaxed text-muted-foreground",
-								children: f.a
-							})]
-						}, f.q))
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-border p-6 md:p-8",
+								style: { background: "var(--gradient-card)" },
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-base font-semibold md:text-lg",
+									children: "What is iGaming gamification?"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-base leading-relaxed text-muted-foreground",
+									children: "iGaming gamification is the use of missions, campaigns, badges, tournaments, leaderboards, levels, rewards, progress mechanics, and personalized journeys inside casino and sportsbook platforms to increase player engagement, activity, retention, and lifetime value."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-border p-6 md:p-8",
+								style: { background: "var(--gradient-card)" },
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-base font-semibold md:text-lg",
+									children: "Why do iGaming operators need gamification?"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-base leading-relaxed text-muted-foreground",
+									children: "iGaming operators use gamification to increase session frequency, retention, product differentiation, cross-product activity, and player lifetime value (LTV) while reducing marketing bonus dependency and player acquisition costs."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-border p-6 md:p-8",
+								style: { background: "var(--gradient-card)" },
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-base font-semibold md:text-lg",
+									children: "How does gamification improve player retention?"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-base leading-relaxed text-muted-foreground",
+									children: "Gamification builds structural retention loops. Daily missions, progression levels, tournament cycles, and personalized streaks give players clear, rewarding goals to return tomorrow, improving 7-day, 30-day, and 90-day retention cohorts."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-border p-6 md:p-8",
+								style: { background: "var(--gradient-card)" },
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-base font-semibold md:text-lg",
+									children: "Can gamification work for both casino and sportsbook?"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-base leading-relaxed text-muted-foreground",
+									children: "Yes. Gamification is vertical-agnostic. For casinos, it powers slots challenges and live-dealer tournaments. For sportsbooks, it powers bet-builder missions, live-betting streaks, and multi-sport leaderboard campaigns."
+								})]
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+								className: "rounded-2xl border border-border p-6 md:p-8",
+								style: { background: "var(--gradient-card)" },
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+									className: "text-base font-semibold md:text-lg",
+									children: "How does Gamifly help operators?"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+									className: "mt-3 text-base leading-relaxed text-muted-foreground",
+									children: "Gamifly is an AI-powered gamification engine that connects to casino and sportsbook platforms via API/SDK. It enables product, CRM, and marketing teams to configure and launch real-time missions, campaigns, tournaments, badges, and loyalty shops from a single dashboard without development overhead."
+								})]
+							})
+						]
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {

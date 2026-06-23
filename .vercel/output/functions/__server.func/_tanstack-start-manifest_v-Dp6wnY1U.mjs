@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-9FgEdrRx.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-Dp6wnY1U.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/Users/orhanguler/Downloads/gamifly-CEO/playerfuel-source/src/routes/__root.tsx",
@@ -8,11 +8,11 @@ var tsrStartManifest = () => ({ routes: {
 			"/resources_/$slug",
 			"/resources/"
 		],
-		preloads: ["/assets/index-D2oMOnbl.js", "/assets/jsx-runtime-DGeXAQPT.js"],
+		preloads: ["/assets/index-C5RbBRcx.js", "/assets/jsx-runtime-DGeXAQPT.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-D2oMOnbl.js"
+			src: "/assets/index-C5RbBRcx.js"
 		} }]
 	},
 	"/": {
@@ -24,30 +24,30 @@ var tsrStartManifest = () => ({ routes: {
 		filePath: "/Users/orhanguler/Downloads/gamifly-CEO/playerfuel-source/src/routes/features.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/features-CSuLfhJR.js",
-			"/assets/button-B6p5i6DK.js",
-			"/assets/circle-check-CbDCbVEG.js",
-			"/assets/trophy-nK1rECa3.js"
+			"/assets/features-WrPyzyYd.js",
+			"/assets/button-CKzoSlOX.js",
+			"/assets/circle-check-DyX_Kli6.js",
+			"/assets/trophy-BdHeYDFb.js"
 		]
 	},
 	"/resources_/$slug": {
 		filePath: "/Users/orhanguler/Downloads/gamifly-CEO/playerfuel-source/src/routes/resources_.$slug.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/resources_._slug-C2fEXRhI.js",
-			"/assets/button-B6p5i6DK.js",
-			"/assets/resources_._slug-D7xmuYXw.js",
-			"/assets/circle-check-CbDCbVEG.js"
+			"/assets/resources_._slug-DV-o5qow.js",
+			"/assets/button-CKzoSlOX.js",
+			"/assets/circle-check-DyX_Kli6.js",
+			"/assets/resources_._slug-Dy6cKzaR.js"
 		]
 	},
 	"/resources/": {
 		filePath: "/Users/orhanguler/Downloads/gamifly-CEO/playerfuel-source/src/routes/resources.index.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/resources.index-wm22gp4t.js",
-			"/assets/button-B6p5i6DK.js",
-			"/assets/circle-check-CbDCbVEG.js",
-			"/assets/trophy-nK1rECa3.js"
+			"/assets/resources.index-DBoEuQme.js",
+			"/assets/button-CKzoSlOX.js",
+			"/assets/circle-check-DyX_Kli6.js",
+			"/assets/trophy-BdHeYDFb.js"
 		]
 	}
 } });
