@@ -55,7 +55,7 @@ const highlights = [
   {
     icon: Workflow,
     title: "Set-and-Forget Campaigns",
-    desc: "Design retention streams once. The engine schedules, runs, and A/B tests campaigns in the background with zero daily CRM workload.",
+    desc: "Design retention streams once. The engine schedules, runs, and A/B tests campaigns in the background with reduced daily CRM workload.",
   },
   {
     icon: Swords,
@@ -73,7 +73,7 @@ const deepDives = [
   {
     icon: Target,
     label: "ZERO-MANAGEMENT MISSIONS",
-    title: "Auto-assigned player quests with zero operational overhead",
+    title: "Auto-assigned player quests with reduced operational overhead",
     points: [
       "Set once, run forever: quests are auto-triggered based on direct player activity streams",
       "Real-time, hands-free progress updates rendered natively inside player lobby",
@@ -130,7 +130,7 @@ const integrationSteps = [
   {
     step: "04",
     title: "Scale Autonomously",
-    desc: "Our AI continuously optimizes campaign triggers, delivering consistent retention yield with zero ongoing maintenance.",
+    desc: "Our AI continuously optimizes campaign triggers, delivering consistent retention yield with lower ongoing maintenance.",
   },
 ];
 
