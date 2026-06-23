@@ -579,9 +579,9 @@ function ResourcesPage() {
               className="rounded-2xl border border-border p-6 md:p-8"
               style={{ background: "var(--gradient-card)" }}
             >
-              <h3 className="text-base font-semibold md:text-lg">What is iGaming gamification?</h3>
+              <h3 className="text-base font-semibold md:text-lg">Will integrating Gamifly disrupt or add latency to our existing PAM and wallet system?</h3>
               <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                iGaming gamification is the use of missions, campaigns, badges, tournaments, leaderboards, levels, rewards, progress mechanics, and personalized journeys inside casino and sportsbook platforms to increase player engagement, activity, retention, and lifetime value.
+                Zero disruption. Gamifly operates as a completely non-custodial engagement layer. It consumes event payloads asynchronously (via Kafka or OpenAPI Webhooks) and never writes to or locking-reads your wallet database. Balances and funds remain 100% under your control, ensuring zero impact on transaction latency or financial integrity.
               </p>
             </div>
 
@@ -589,59 +589,9 @@ function ResourcesPage() {
               className="rounded-2xl border border-border p-6 md:p-8"
               style={{ background: "var(--gradient-card)" }}
             >
-              <h3 className="text-base font-semibold md:text-lg">Why do iGaming operators need gamification?</h3>
+              <h3 className="text-base font-semibold md:text-lg">We cannot afford a 6-month development project. What is the real-world integration timeline?</h3>
               <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                iGaming operators use gamification to increase session frequency, retention, product differentiation, cross-product activity, and player lifetime value (LTV) while reducing marketing bonus dependency and player acquisition costs.
-              </p>
-            </div>
-
-            <div
-              className="rounded-2xl border border-border p-6 md:p-8"
-              style={{ background: "var(--gradient-card)" }}
-            >
-              <h3 className="text-base font-semibold md:text-lg">How does gamification improve player retention?</h3>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                Gamification builds structural retention loops. Daily missions, progression levels, tournament cycles, and personalized streaks give players clear, rewarding goals to return tomorrow, improving 7-day, 30-day, and 90-day retention cohorts.
-              </p>
-            </div>
-
-            <div
-              className="rounded-2xl border border-border p-6 md:p-8"
-              style={{ background: "var(--gradient-card)" }}
-            >
-              <h3 className="text-base font-semibold md:text-lg">Can gamification work for both casino and sportsbook?</h3>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                Yes. Gamification is vertical-agnostic. For casinos, it powers slots challenges and live-dealer tournaments. For sportsbooks, it powers bet-builder missions, live-betting streaks, and multi-sport leaderboard campaigns.
-              </p>
-            </div>
-
-            <div
-              className="rounded-2xl border border-border p-6 md:p-8"
-              style={{ background: "var(--gradient-card)" }}
-            >
-              <h3 className="text-base font-semibold md:text-lg">How does Gamifly help operators?</h3>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                Gamifly is an AI-powered gamification engine that connects to casino and sportsbook platforms via API/SDK. It enables product, CRM, and marketing teams to configure and launch real-time missions, campaigns, tournaments, badges, and loyalty shops from a single dashboard without development overhead.
-              </p>
-            </div>
-
-            <div
-              className="rounded-2xl border border-border p-6 md:p-8"
-              style={{ background: "var(--gradient-card)" }}
-            >
-              <h3 className="text-base font-semibold md:text-lg">How does Gamifly handle wallet integration and transaction security?</h3>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                Gamifly operates as a non-custodial engagement layer, meaning we do not touch, hold, or process player funds directly. Integration is handled via secure seamless wallet APIs or transactional webhooks. The operator retains 100% control over player balances, while Gamifly simply listens to game/bet event streams and triggers rewards, ensuring zero impact on transaction latency or financial integrity.
-              </p>
-            </div>
-
-            <div
-              className="rounded-2xl border border-border p-6 md:p-8"
-              style={{ background: "var(--gradient-card)" }}
-            >
-              <h3 className="text-base font-semibold md:text-lg">What is the technical integration overhead and required dev resources?</h3>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                Minimal. Gamifly is built on an API-first, event-driven architecture. By consuming your existing event streams (via Kafka, WebSockets, or OpenAPI-compliant REST webhooks), we require zero changes to your core game server logic. Most operators go live with a single engineer in less than 3 weeks using our pre-built lobby widgets and comprehensive SDKs.
+                14 to 21 days with a single engineer. Because Gamifly is API-first, you only need to point your existing transaction event streams to our gateway. Our pre-built lobby widgets are copy-paste SDK scripts, requiring no custom frontend rendering or game logic rewrites.
               </p>
             </div>
 
@@ -651,7 +601,7 @@ function ResourcesPage() {
             >
               <h3 className="text-base font-semibold md:text-lg">How does the platform ensure compliance in strictly regulated jurisdictions (e.g. UKGC, MGA, DGOJ)?</h3>
               <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                Compliance is built into our core rules engine. Gamifly features geography-aware configuration profiles. You can restrict specific mechanics (like randomized reward boxes or live leaderboards) in jurisdictions where they are classified as lottery or require specific licensing, and fully automate age-gated limits and responsible gaming controls in real time.
+                Compliance is handled via jurisdiction-aware configuration profiles. Our dashboard lets compliance teams toggle mechanics (like prize wheels, progression loot boxes, or live rankings) dynamically per user country. All transaction logs and rewards are fully traceable and cryptographically audited, keeping you 100% compliant.
               </p>
             </div>
 
@@ -661,7 +611,7 @@ function ResourcesPage() {
             >
               <h3 className="text-base font-semibold md:text-lg">Can Gamifly handle high-volume traffic spike loads during major sporting events?</h3>
               <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                Yes. Our engine is built to scale horizontally using a cloud-native, distributed event broker system (Kafka) capable of processing over 50,000 game-bet events per second with sub-100ms response times. Whether it is a Premier League Sunday or the World Cup final, player progression, leaderboard rankings, and reward triggers hydrate instantly without degrading your platform's core performance.
+                Easily. Our engine scales horizontally using a cloud-native, distributed event broker system (Kafka) capable of processing over 50,000 game-bet events per second. Live leaderboard rankings and player milestone triggers hydrate under 100ms, ensuring your platform's lobby remains ultra-responsive even during World Cup finals.
               </p>
             </div>
           </div>
