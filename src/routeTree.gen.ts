@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as IgamingGamificationVsCrmBonusCampaignsRouteImport } from './routes/igaming-gamification-vs-crm-bonus-campaigns'
 import { Route as GamiflyVsSmarticoRouteImport } from './routes/gamifly-vs-smartico'
 import { Route as GamiflyVsFutureAnthemRouteImport } from './routes/gamifly-vs-future-anthem'
 import { Route as FeaturesRouteImport } from './routes/features'
@@ -16,6 +17,12 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
 import { Route as ResourcesSlugRouteImport } from './routes/resources_.$slug'
 
+const IgamingGamificationVsCrmBonusCampaignsRoute =
+  IgamingGamificationVsCrmBonusCampaignsRouteImport.update({
+    id: '/igaming-gamification-vs-crm-bonus-campaigns',
+    path: '/igaming-gamification-vs-crm-bonus-campaigns',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const GamiflyVsSmarticoRoute = GamiflyVsSmarticoRouteImport.update({
   id: '/gamifly-vs-smartico',
   path: '/gamifly-vs-smartico',
@@ -52,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/features': typeof FeaturesRoute
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
+  '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
 }
@@ -60,6 +68,7 @@ export interface FileRoutesByTo {
   '/features': typeof FeaturesRoute
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
+  '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources': typeof ResourcesIndexRoute
 }
@@ -69,6 +78,7 @@ export interface FileRoutesById {
   '/features': typeof FeaturesRoute
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
+  '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
   '/resources_/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
 }
@@ -79,6 +89,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
+    | '/igaming-gamification-vs-crm-bonus-campaigns'
     | '/resources/$slug'
     | '/resources/'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +98,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
+    | '/igaming-gamification-vs-crm-bonus-campaigns'
     | '/resources/$slug'
     | '/resources'
   id:
@@ -95,6 +107,7 @@ export interface FileRouteTypes {
     | '/features'
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
+    | '/igaming-gamification-vs-crm-bonus-campaigns'
     | '/resources_/$slug'
     | '/resources/'
   fileRoutesById: FileRoutesById
@@ -104,12 +117,20 @@ export interface RootRouteChildren {
   FeaturesRoute: typeof FeaturesRoute
   GamiflyVsFutureAnthemRoute: typeof GamiflyVsFutureAnthemRoute
   GamiflyVsSmarticoRoute: typeof GamiflyVsSmarticoRoute
+  IgamingGamificationVsCrmBonusCampaignsRoute: typeof IgamingGamificationVsCrmBonusCampaignsRoute
   ResourcesSlugRoute: typeof ResourcesSlugRoute
   ResourcesIndexRoute: typeof ResourcesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/igaming-gamification-vs-crm-bonus-campaigns': {
+      id: '/igaming-gamification-vs-crm-bonus-campaigns'
+      path: '/igaming-gamification-vs-crm-bonus-campaigns'
+      fullPath: '/igaming-gamification-vs-crm-bonus-campaigns'
+      preLoaderRoute: typeof IgamingGamificationVsCrmBonusCampaignsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/gamifly-vs-smartico': {
       id: '/gamifly-vs-smartico'
       path: '/gamifly-vs-smartico'
@@ -160,6 +181,8 @@ const rootRouteChildren: RootRouteChildren = {
   FeaturesRoute: FeaturesRoute,
   GamiflyVsFutureAnthemRoute: GamiflyVsFutureAnthemRoute,
   GamiflyVsSmarticoRoute: GamiflyVsSmarticoRoute,
+  IgamingGamificationVsCrmBonusCampaignsRoute:
+    IgamingGamificationVsCrmBonusCampaignsRoute,
   ResourcesSlugRoute: ResourcesSlugRoute,
   ResourcesIndexRoute: ResourcesIndexRoute,
 }
