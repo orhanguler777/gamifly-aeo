@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://resources.gamification.orhanguler.uk/sitemap.xml

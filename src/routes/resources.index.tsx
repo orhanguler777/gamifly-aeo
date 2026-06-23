@@ -414,7 +414,7 @@ function ROICalculator() {
 
 function ResourcesPage() {
   return (
-    <div className="dark min-h-screen bg-background text-foreground antialiased">
+    <div className="dark min-h-screen bg-background text-foreground antialiased" data-deploy-check="resources-sections-v2">
       {/* Hero */}
       <header
         className="relative overflow-hidden border-b border-border"

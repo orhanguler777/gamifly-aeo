@@ -1,1 +1,0 @@
-import{t as e}from"./jsx-runtime-DGeXAQPT.js";var t=e();function n(){return(0,t.jsx)(`div`,{className:`flex min-h-screen items-center justify-center`,style:{backgroundColor:`#fcfbf8`},children:(0,t.jsx)(`img`,{src:`/logo.png`,alt:`Gamifly`})})}export{n as component};

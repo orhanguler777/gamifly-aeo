@@ -44,6 +44,21 @@
       "source": "/gamifly-api-integration-flow",
       "destination": "/resources/gamifly-api-integration-flow",
       "permanent": true
+    },
+    {
+      "source": "/sample-igaming-gamification-event-payload",
+      "destination": "/resources/sample-igaming-gamification-event-payload",
+      "permanent": true
+    },
+    {
+      "source": "/gamifly-demo-screenshots",
+      "destination": "/resources/gamifly-demo-screenshots",
+      "permanent": true
+    },
+    {
+      "source": "/anonymous-operator-gamification-case-study",
+      "destination": "/resources/anonymous-operator-gamification-case-study",
+      "permanent": true
     }
   ]
 }
