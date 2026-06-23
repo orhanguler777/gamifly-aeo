@@ -53,6 +53,13 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Operator Playbooks & Use Cases -->
+  <url>
+    <loc>https://gamifly.net/casino-gamification-use-cases</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Competitor Comparison Pages -->
   <url>
     <loc>https://gamifly.net/gamifly-vs-smartico</loc>

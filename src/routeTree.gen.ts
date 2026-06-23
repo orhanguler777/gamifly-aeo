@@ -13,6 +13,7 @@ import { Route as IgamingGamificationVsCrmBonusCampaignsRouteImport } from './ro
 import { Route as GamiflyVsSmarticoRouteImport } from './routes/gamifly-vs-smartico'
 import { Route as GamiflyVsFutureAnthemRouteImport } from './routes/gamifly-vs-future-anthem'
 import { Route as FeaturesRouteImport } from './routes/features'
+import { Route as CasinoGamificationUseCasesRouteImport } from './routes/casino-gamification-use-cases'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
 import { Route as ResourcesSlugRouteImport } from './routes/resources_.$slug'
@@ -38,6 +39,12 @@ const FeaturesRoute = FeaturesRouteImport.update({
   path: '/features',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CasinoGamificationUseCasesRoute =
+  CasinoGamificationUseCasesRouteImport.update({
+    id: '/casino-gamification-use-cases',
+    path: '/casino-gamification-use-cases',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -56,6 +63,7 @@ const ResourcesSlugRoute = ResourcesSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/casino-gamification-use-cases': typeof CasinoGamificationUseCasesRoute
   '/features': typeof FeaturesRoute
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
@@ -65,6 +73,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/casino-gamification-use-cases': typeof CasinoGamificationUseCasesRoute
   '/features': typeof FeaturesRoute
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
@@ -75,6 +84,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/casino-gamification-use-cases': typeof CasinoGamificationUseCasesRoute
   '/features': typeof FeaturesRoute
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
@@ -86,6 +96,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/casino-gamification-use-cases'
     | '/features'
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/casino-gamification-use-cases'
     | '/features'
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
@@ -104,6 +116,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/casino-gamification-use-cases'
     | '/features'
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
@@ -114,6 +127,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CasinoGamificationUseCasesRoute: typeof CasinoGamificationUseCasesRoute
   FeaturesRoute: typeof FeaturesRoute
   GamiflyVsFutureAnthemRoute: typeof GamiflyVsFutureAnthemRoute
   GamiflyVsSmarticoRoute: typeof GamiflyVsSmarticoRoute
@@ -152,6 +166,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FeaturesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/casino-gamification-use-cases': {
+      id: '/casino-gamification-use-cases'
+      path: '/casino-gamification-use-cases'
+      fullPath: '/casino-gamification-use-cases'
+      preLoaderRoute: typeof CasinoGamificationUseCasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -178,6 +199,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CasinoGamificationUseCasesRoute: CasinoGamificationUseCasesRoute,
   FeaturesRoute: FeaturesRoute,
   GamiflyVsFutureAnthemRoute: GamiflyVsFutureAnthemRoute,
   GamiflyVsSmarticoRoute: GamiflyVsSmarticoRoute,
