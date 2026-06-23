@@ -139,28 +139,28 @@ const caseStudies = [
     metric: "-32%",
     label: "Bonus Spend Reduction",
     operatorType: "Tier-1 Sportsbook Operator",
-    headline: "How a Tier-1 Sportsbook Reduced Bonus Spend by 32% While Boosting Player Retention",
+    headline: "Illustrative Scenario: Tier-1 Sportsbook Aims to Reduce Bonus Spend by 32%",
     challenge: "Margin erosion due to high player bonus dependency coupled with a 65% churn rate after signup campaigns.",
     solution: "Swapped raw push bonuses with Gamifly's auto-triggered sports quests and tournament-based loyalty tokens.",
-    result: "Slashed monthly bonus spend by 32% while generating a +28% uplift in 30-day player retention cohorts."
+    result: "Example outcome: Target a 32% reduction in monthly bonus spend while aiming for a +28% uplift in 30-day player retention cohorts."
   },
   {
     metric: "-24%",
     label: "VIP Churn Reduction",
     operatorType: "LatAm Casino Brand",
-    headline: "How a LatAm Casino Operator Cut VIP Churn by 24% & Multiplied Lifetime Value",
+    headline: "Illustrative Scenario: LatAm Casino Operator Targets 24% VIP Churn Reduction",
     challenge: "High attrition rates among VIP players and heavy resource drain from manual CRM segment management.",
     solution: "Implemented Gamifly's AI-managed automated progression layers and dynamic hands-free reward distribution.",
-    result: "Cut VIP segment churn by 24% within 60 days, yielding a 3.5× increase in player lifetime value (LTV)."
+    result: "Example outcome: Aim to cut VIP segment churn by 24% within 60 days, potentially yielding a 3.5× increase in LTV."
   },
   {
     metric: "+18%",
     label: "Cross-Product Play Rate",
     operatorType: "Multi-Vertical Brand",
-    headline: "How a Multi-Vertical Brand Generated a +18% Increase in Cross-Product Play Rate",
+    headline: "Illustrative Scenario: Multi-Vertical Brand Aims for +18% Cross-Product Play Rate",
     challenge: "Siloed casino and sportsbook lobby engagement, resulting in low slots play from sports bettor segments.",
     solution: "Launched unified quests linking sports bet milestones to slot free spins using a single real-time rewards wallet.",
-    result: "Drove an immediate +18% increase in cross-product play rate alongside a +15% lift in average revenue per user (ARPU)."
+    result: "Example outcome: Target an immediate +18% increase in cross-product play rate alongside a +15% lift in average revenue per user (ARPU)."
   }
 ];
 
@@ -438,13 +438,16 @@ function FeaturesPage() {
         <section className="pb-24" aria-labelledby="case-studies">
           <div className="mb-14 max-w-2xl">
             <p className="text-sm font-medium uppercase tracking-wider text-primary">
-              Success Stories
+              Illustrative operator scenarios
             </p>
             <h2 id="case-studies" className="mt-2 text-3xl font-bold md:text-4xl">
-              iGaming Micro-Case Studies
+              Example operator scenarios
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Discover how sportsbooks and casino operators leverage Gamifly's retention engine to drive significant player engagement and lifetime value.
+              Discover how sportsbooks and casino operators may leverage Gamifly's retention engine to drive significant player engagement and lifetime value.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground/80 italic border-l-2 border-primary/30 pl-4">
+              These examples are illustrative business scenarios based on common iGaming retention and bonus-cost challenges. Actual results depend on operator traffic, player segments, markets, campaign design, and integration scope.
             </p>
           </div>
 
@@ -482,7 +485,7 @@ function FeaturesPage() {
                   </div>
                 </div>
                 <div className="mt-8 border-t border-border pt-6">
-                  <span className="font-semibold text-primary block text-xs uppercase tracking-wider">Key Result:</span>
+                  <span className="font-semibold text-primary block text-xs uppercase tracking-wider">Example Outcome:</span>
                   <p className="mt-1.5 text-sm font-medium text-foreground leading-relaxed">
                     {cs.result}
                   </p>

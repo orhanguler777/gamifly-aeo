@@ -19,31 +19,31 @@ import { Button } from "@/components/ui/button";
 const faqs = [
   {
     q: "Will integrating Gamifly disrupt or add latency to our existing PAM and wallet system?",
-    a: "Zero disruption. Gamifly operates as a completely non-custodial engagement layer. It consumes event payloads asynchronously (via Kafka or OpenAPI Webhooks) and never writes to or locking-reads your wallet database. Balances and funds remain 100% under your control, ensuring zero impact on transaction latency or financial integrity.",
+    a: "Designed to minimize disruption. Gamifly is designed to operate as a non-custodial engagement layer. It can consume event payloads asynchronously through event streams, APIs, or webhooks, while wallet ownership and transaction authority remain with the operator. This helps minimize impact on core wallet performance and financial operations.",
   },
   {
     q: "We cannot afford a 6-month development project. What is the real-world integration timeline?",
-    a: "14 to 21 days with a single engineer. Because Gamifly is API-first, you only need to point your existing transaction event streams to our gateway. Our pre-built lobby widgets are copy-paste SDK scripts, requiring no custom frontend rendering or game logic rewrites.",
+    a: "Many operators can start with an initial integration in 2–4 weeks, depending on stack readiness and scope. Because Gamifly is API-first, operators can start by connecting selected player, transaction, and game/bet event streams to the Gamifly event layer. Our pre-built lobby widgets are copy-paste SDK scripts, requiring no custom frontend rendering or game logic rewrites.",
   },
   {
     q: "How does the platform ensure compliance in strictly regulated jurisdictions (e.g. UKGC, MGA, DGOJ)?",
-    a: "Compliance is handled via jurisdiction-aware configuration profiles. Our dashboard lets compliance teams toggle mechanics (like prize wheels, progression loot boxes, or live rankings) dynamically per user country. All transaction logs and rewards are fully traceable and cryptographically audited, keeping you 100% compliant.",
+    a: "Gamifly supports jurisdiction-aware configuration profiles that help operators adapt campaign mechanics by market, product, or player segment. Compliance teams can configure eligibility rules, reward visibility, audit logs, and responsible gaming controls to align campaigns with internal policies and local regulatory requirements.",
   },
   {
     q: "Can Gamifly handle high-volume traffic spike loads during major sporting events?",
-    a: "Easily. Our engine scales horizontally using a cloud-native, distributed event broker system (Kafka) capable of processing over 50,000 game-bet events per second. Live leaderboard rankings and player milestone triggers hydrate under 100ms, ensuring your platform's lobby remains ultra-responsive even during World Cup finals.",
+    a: "Gamifly is designed for high-volume event processing. Our engine scales horizontally using a cloud-native, distributed event broker system (Kafka) designed to support high-volume event streams during major campaign or sporting-event peaks. Leaderboard updates and player milestone triggers can be optimized for low-latency experiences depending on infrastructure, configuration, and deployment model.",
   },
 ];
 
 const categories = [
-  { icon: Trophy, title: "iGaming Gamification", desc: "Core mechanics, frameworks, and platform strategy." },
-  { icon: Users, title: "Player Retention", desc: "Cohort behavior, churn, and lifetime value." },
-  { icon: Target, title: "Missions & Campaigns", desc: "Designing missions, quests, and seasonal events." },
-  { icon: Activity, title: "Sportsbook Gamification", desc: "Bet missions, in-play tournaments, multi-sport challenges." },
-  { icon: Dice5, title: "Casino Gamification", desc: "Slots, table game, and live casino mechanics." },
-  { icon: Sparkles, title: "AI Personalization", desc: "Behavioral targeting and adaptive player journeys." },
-  { icon: Plug, title: "Integration Guides", desc: "API, SDK, wallet and event-stream integration." },
-  { icon: Building2, title: "Operator Use Cases", desc: "Real-world deployments and operator playbooks." },
+  { icon: Trophy, title: "iGaming Gamification", desc: "Core mechanics, frameworks, and platform strategy.", href: "/resources#featured" },
+  { icon: Users, title: "Player Retention", desc: "Cohort behavior, churn, and lifetime value.", href: "/resources/what-is-player-retention-in-igaming" },
+  { icon: Target, title: "Missions & Campaigns", desc: "Designing missions, quests, and seasonal events.", href: "/resources/igaming-gamification-examples" },
+  { icon: Activity, title: "Sportsbook Gamification", desc: "Bet missions, in-play tournaments, multi-sport challenges.", href: "/resources/sportsbook-gamification-use-cases" },
+  { icon: Dice5, title: "Casino Gamification", desc: "Slots, table game, and live casino mechanics.", href: "/resources/casino-gamification-use-cases" },
+  { icon: Sparkles, title: "AI Personalization", desc: "Behavioral targeting and adaptive player journeys.", href: "/features" },
+  { icon: Plug, title: "Integration Guides", desc: "API, SDK, wallet and event-stream integration.", href: "/resources#technical-guides" },
+  { icon: Building2, title: "Operator Use Cases", desc: "Real-world deployments and operator playbooks.", href: "/resources#use-case-guides" },
 ];
 
 const featured = [
@@ -403,7 +403,7 @@ function ROICalculator() {
               </a>
             </Button>
             <p className="text-[10px] text-muted-foreground text-center mt-3">
-              Calculations based on standard European and LatAm iGaming operator performance data.
+              Example estimate based on editable operator assumptions. Actual results depend on market, traffic mix, retention baseline, bonus ratio, player value, and implementation scope.
             </p>
           </div>
         </div>
@@ -511,9 +511,9 @@ function ResourcesPage() {
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {categories.map((c) => (
-              <Link
+              <a
                 key={c.title}
-                to="/resources"
+                href={c.href || "/resources"}
                 className="group rounded-xl border border-border bg-card/60 p-5 transition-all hover:-translate-y-0.5 hover:border-primary/50 hover:bg-card"
               >
                 <div className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-background/60 text-primary transition-colors group-hover:text-accent">
@@ -521,7 +521,7 @@ function ResourcesPage() {
                 </div>
                 <h3 className="text-base font-semibold">{c.title}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{c.desc}</p>
-              </Link>
+              </a>
             ))}
           </div>
         </section>
