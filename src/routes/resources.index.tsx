@@ -18,27 +18,23 @@ import { Button } from "@/components/ui/button";
 const faqs = [
   {
     q: "What is iGaming gamification?",
-    a: "iGaming gamification is the use of game mechanics — missions, badges, tournaments, leaderboards, levels, and rewards — inside casino and sportsbook products to make the player experience more engaging, habit-forming, and rewarding. For operators it becomes a platform layer that drives activity, retention, and lifetime value.",
+    a: "iGaming gamification is the use of missions, campaigns, badges, tournaments, leaderboards, levels, rewards, progress mechanics, and personalized journeys inside casino and sportsbook platforms to increase player engagement, activity, retention, and lifetime value.",
   },
   {
     q: "Why do iGaming operators need gamification?",
-    a: "Player acquisition costs keep rising while product differentiation between operators shrinks. Gamification gives operators a structural way to increase session frequency, deposit cadence, cross-product play, and retention without relying solely on bonuses or free bets.",
+    a: "iGaming operators use gamification to increase session frequency, retention, product differentiation, cross-product activity, and player lifetime value (LTV) while reducing marketing bonus dependency and player acquisition costs.",
   },
   {
     q: "How does gamification improve player retention?",
-    a: "Missions and progression systems give players a reason to return tomorrow, not just today. Personalized journeys, streaks, badges, and tournament cycles create short, medium, and long-term goals that compound into higher 7, 30, and 90-day retention.",
+    a: "Gamification builds structural retention loops. Daily missions, progression levels, tournament cycles, and personalized streaks give players clear, rewarding goals to return tomorrow, improving 7-day, 30-day, and 90-day retention cohorts.",
   },
   {
     q: "Can gamification work for both casino and sportsbook?",
-    a: "Yes. The mechanics adapt to the vertical — slots missions, table-game challenges, and live-casino tournaments on the casino side; bet-builder missions, multi-sport challenges, and in-play tournaments on the sportsbook side — all running on the same engine and player profile.",
+    a: "Yes. Gamification is vertical-agnostic. For casinos, it powers slots challenges and live-dealer tournaments. For sportsbooks, it powers bet-builder missions, live-betting streaks, and multi-sport leaderboard campaigns.",
   },
   {
-    q: "How does Gamifly integrate with operator platforms?",
-    a: "Gamifly connects via API/SDK to the operator's wallet, player account, and game/bet event streams. Integration is designed to be incremental: start with a single mission engine, then layer in campaigns, badges, tournaments, rewards, and AI personalization.",
-  },
-  {
-    q: "What is AI-based player retention?",
-    a: "AI-based player retention uses behavioral signals — game preferences, session timing, bet patterns, churn risk — to automatically assign the right mission, reward, or campaign to the right player at the right moment, replacing static, segment-level CRM with individualized journeys.",
+    q: "How does Gamifly help operators?",
+    a: "Gamifly is an AI-powered gamification engine that connects to casino and sportsbook platforms via API/SDK. It enables product, CRM, and marketing teams to configure and launch real-time missions, campaigns, tournaments, badges, and loyalty shops from a single dashboard without development overhead.",
   },
 ];
 
@@ -55,37 +51,37 @@ const categories = [
 
 const featured = [
   {
-    href: "/resources/what-is-igaming-gamification",
+    slug: "what-is-igaming-gamification",
     tag: "iGaming Gamification",
     title: "What is iGaming Gamification?",
     desc: "A complete primer on gamification for casino and sportsbook operators — mechanics, business case, and platform layer.",
   },
   {
-    href: "/resources/what-is-player-retention-in-igaming",
+    slug: "what-is-player-retention-in-igaming",
     tag: "Player Retention",
     title: "What is Player Retention in iGaming?",
     desc: "How operators measure retention, why churn happens, and where gamification moves the curve.",
   },
   {
-    href: "/resources/igaming-gamification-examples",
+    slug: "igaming-gamification-examples",
     tag: "Examples",
     title: "iGaming Gamification Examples",
     desc: "Real-world mission, tournament, and badge designs used by leading casino and sportsbook brands.",
   },
   {
-    href: "/resources/gamification-kpis-for-operators",
+    slug: "gamification-kpis-for-operators",
     tag: "KPIs",
     title: "Gamification KPIs for Operators",
     desc: "The metrics that matter: activity rate, retention uplift, mission completion, and revenue per active player.",
   },
   {
-    href: "/resources/igaming-retention-strategy",
+    slug: "igaming-retention-strategy",
     tag: "Strategy",
     title: "iGaming Retention Strategy",
     desc: "A practical playbook for building a retention layer with missions, campaigns, and AI personalization.",
   },
   {
-    href: "/resources/gamification-integration-checklist",
+    slug: "gamification-integration-checklist",
     tag: "Integration",
     title: "Gamification Integration Checklist",
     desc: "Everything technical and product teams need before, during, and after launching a gamification platform.",
@@ -95,19 +91,19 @@ const featured = [
 const startHere = [
   {
     icon: BookOpen,
-    href: "/resources/what-is-igaming-gamification",
+    slug: "what-is-igaming-gamification",
     title: "What is iGaming Gamification?",
     desc: "Start with the fundamentals — what gamification actually means in iGaming and why it's now a platform layer.",
   },
   {
     icon: Rocket,
-    href: "/resources/what-is-player-retention-in-igaming",
+    slug: "what-is-player-retention-in-igaming",
     title: "How to Increase Player Retention in iGaming",
     desc: "A strategic walkthrough of the mechanics that move 7, 30, and 90-day retention for casino and sportsbook.",
   },
   {
     icon: CheckCircle2,
-    href: "/resources/gamification-integration-checklist",
+    slug: "gamification-integration-checklist",
     title: "Gamification Integration Checklist for Operators",
     desc: "The product, tech, and CRM checklist for a clean rollout — from wallet integration to AI journeys.",
   },
@@ -224,8 +220,9 @@ function ResourcesPage() {
           <div className="grid gap-6 md:grid-cols-3">
             {startHere.map((item) => (
               <Link
-                key={item.href}
-                to={item.href}
+                key={item.slug}
+                to="/resources/$slug"
+                params={{ slug: item.slug }}
                 className="group relative overflow-hidden rounded-2xl border border-border p-6 transition-all hover:border-primary/50 hover:shadow-[var(--shadow-glow)]"
                 style={{ background: "var(--gradient-card)" }}
               >
@@ -288,7 +285,7 @@ function ResourcesPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {featured.map((item) => (
               <article
-                key={item.href}
+                key={item.slug}
                 className="group flex flex-col overflow-hidden rounded-2xl border border-border transition-all hover:border-primary/50 hover:shadow-[var(--shadow-glow)]"
                 style={{ background: "var(--gradient-card)" }}
               >
@@ -303,7 +300,7 @@ function ResourcesPage() {
                     variant="ghost"
                     className="mt-6 w-fit -ml-3 text-primary hover:bg-primary/10 hover:text-primary"
                   >
-                    <Link to={item.href}>
+                    <Link to="/resources/$slug" params={{ slug: item.slug }}>
                       Read more
                       <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                     </Link>

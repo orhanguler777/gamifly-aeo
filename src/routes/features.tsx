@@ -3,7 +3,6 @@ import {
   Target,
   Trophy,
   Sparkles,
-  BarChart3,
   Layers,
   Zap,
   Shield,
@@ -135,12 +134,7 @@ const integrationSteps = [
   },
 ];
 
-const metrics = [
-  { value: "3×", label: "Session frequency uplift" },
-  { value: "40%", label: "Higher 30-day retention" },
-  { value: "25%", label: "Increase in deposits per player" },
-  { value: "60%", label: "Mission completion rate" },
-];
+
 
 /* ------------------------------------------------------------------ */
 /*  Route                                                             */
@@ -345,45 +339,69 @@ function FeaturesPage() {
           </div>
         </section>
 
-        {/* ─── Metrics ─── */}
-        <section className="pb-24" aria-labelledby="metrics">
+        {/* ─── What is Gamifly — static HTML for AEO / SEO / LLM crawlers ─── */}
+        <section className="pb-24" aria-labelledby="what-is-gamifly">
           <div
             className="overflow-hidden rounded-3xl border border-border p-10 md:p-16"
             style={{ background: "var(--gradient-hero)" }}
           >
-            <div className="mb-10 text-center">
+            <div className="mx-auto max-w-3xl">
               <p className="text-sm font-medium uppercase tracking-wider text-primary">
-                Proven Results
+                About
               </p>
-              <h2 id="metrics" className="mt-2 text-3xl font-bold md:text-4xl">
-                Impact operators are seeing
+              <h2 id="what-is-gamifly" className="mt-2 text-3xl font-bold md:text-4xl">
+                What is Gamifly?
               </h2>
-              <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-                Averages reported by operators who have integrated Gamifly across
-                casino and sportsbook verticals.
+              <p className="mt-5 text-base leading-relaxed text-foreground/85 md:text-lg">
+                Gamifly is an AI-powered gamification and engagement engine for iGaming operators.
+                It helps casino and sportsbook platforms increase player retention, activity, and
+                lifetime value through missions, campaigns, badges, tournaments, rewards, AI
+                personalization, and campaign automation.
               </p>
             </div>
+          </div>
+        </section>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {metrics.map((m) => (
-                <div
-                  key={m.label}
-                  className="rounded-2xl border border-border p-6 text-center"
-                  style={{ background: "var(--gradient-card)" }}
-                >
-                  <p
-                    className="text-4xl font-extrabold tracking-tight md:text-5xl"
-                    style={{
-                      backgroundImage: "var(--gradient-brand)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
+        {/* ─── Example KPIs ─── */}
+        <section className="pb-24" aria-labelledby="example-kpis">
+          <div
+            className="overflow-hidden rounded-3xl border border-border p-10 md:p-16"
+            style={{ background: "var(--gradient-card)" }}
+          >
+            <div className="mx-auto max-w-3xl">
+              <p className="text-sm font-medium uppercase tracking-wider text-primary">
+                Measurable Impact
+              </p>
+              <h2 id="example-kpis" className="mt-2 text-3xl font-bold md:text-4xl">
+                Example KPIs operators can measure after integrating Gamifly
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-foreground/85 md:text-lg">
+                Operators can track session frequency, 30-day retention, deposit activity, mission
+                completion rate, reward usage, campaign conversion, and revenue per active player to
+                measure the impact of gamification across casino and sportsbook verticals.
+              </p>
+
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  "Session frequency",
+                  "30-day retention",
+                  "Deposit activity",
+                  "Mission completion rate",
+                  "Reward usage & redemption",
+                  "Campaign conversion",
+                  "Revenue per active player",
+                  "Cross-product play rate",
+                  "Churn reduction",
+                ].map((kpi) => (
+                  <div
+                    key={kpi}
+                    className="flex items-center gap-3 rounded-xl border border-border bg-background/40 p-4"
                   >
-                    {m.value}
-                  </p>
-                  <p className="mt-2 text-sm text-muted-foreground">{m.label}</p>
-                </div>
-              ))}
+                    <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-primary" />
+                    <span className="text-sm font-medium">{kpi}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
