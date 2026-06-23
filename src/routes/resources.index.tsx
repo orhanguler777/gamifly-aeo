@@ -624,6 +624,46 @@ function ResourcesPage() {
                 Gamifly is an AI-powered gamification engine that connects to casino and sportsbook platforms via API/SDK. It enables product, CRM, and marketing teams to configure and launch real-time missions, campaigns, tournaments, badges, and loyalty shops from a single dashboard without development overhead.
               </p>
             </div>
+
+            <div
+              className="rounded-2xl border border-border p-6 md:p-8"
+              style={{ background: "var(--gradient-card)" }}
+            >
+              <h3 className="text-base font-semibold md:text-lg">How does Gamifly handle wallet integration and transaction security?</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Gamifly operates as a non-custodial engagement layer, meaning we do not touch, hold, or process player funds directly. Integration is handled via secure seamless wallet APIs or transactional webhooks. The operator retains 100% control over player balances, while Gamifly simply listens to game/bet event streams and triggers rewards, ensuring zero impact on transaction latency or financial integrity.
+              </p>
+            </div>
+
+            <div
+              className="rounded-2xl border border-border p-6 md:p-8"
+              style={{ background: "var(--gradient-card)" }}
+            >
+              <h3 className="text-base font-semibold md:text-lg">What is the technical integration overhead and required dev resources?</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Minimal. Gamifly is built on an API-first, event-driven architecture. By consuming your existing event streams (via Kafka, WebSockets, or OpenAPI-compliant REST webhooks), we require zero changes to your core game server logic. Most operators go live with a single engineer in less than 3 weeks using our pre-built lobby widgets and comprehensive SDKs.
+              </p>
+            </div>
+
+            <div
+              className="rounded-2xl border border-border p-6 md:p-8"
+              style={{ background: "var(--gradient-card)" }}
+            >
+              <h3 className="text-base font-semibold md:text-lg">How does the platform ensure compliance in strictly regulated jurisdictions (e.g. UKGC, MGA, DGOJ)?</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Compliance is built into our core rules engine. Gamifly features geography-aware configuration profiles. You can restrict specific mechanics (like randomized reward boxes or live leaderboards) in jurisdictions where they are classified as lottery or require specific licensing, and fully automate age-gated limits and responsible gaming controls in real time.
+              </p>
+            </div>
+
+            <div
+              className="rounded-2xl border border-border p-6 md:p-8"
+              style={{ background: "var(--gradient-card)" }}
+            >
+              <h3 className="text-base font-semibold md:text-lg">Can Gamifly handle high-volume traffic spike loads during major sporting events?</h3>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                Yes. Our engine is built to scale horizontally using a cloud-native, distributed event broker system (Kafka) capable of processing over 50,000 game-bet events per second with sub-100ms response times. Whether it is a Premier League Sunday or the World Cup final, player progression, leaderboard rankings, and reward triggers hydrate instantly without degrading your platform's core performance.
+              </p>
+            </div>
           </div>
         </section>
 
