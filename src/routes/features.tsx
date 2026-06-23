@@ -605,11 +605,10 @@ function FeaturesPage() {
               id="features-cta"
               className="relative text-3xl font-bold tracking-tight md:text-5xl"
             >
-              Ready to turn engagement into a platform layer?
+              Stop Burning Margin on Bonuses. Make Your Lobby Sticky.
             </h2>
             <p className="relative mx-auto mt-5 max-w-2xl text-lg text-muted-foreground">
-              See how Gamifly can integrate into your casino or sportsbook
-              platform. Schedule a personalized walkthrough with our team.
+              Stop letting player acquisition leak through immediate churn. Integrate Gamifly's API-first gamification engine in weeks to build habit-forming loyalty loops players won't abandon — without engineering overhead.
             </p>
             <div className="relative mt-8 flex flex-wrap justify-center gap-3">
               <Button
@@ -618,7 +617,7 @@ function FeaturesPage() {
                 className="border-0 text-primary-foreground shadow-[var(--shadow-glow)]"
                 style={{ background: "var(--gradient-brand)" }}
               >
-                <a href="/contact">Book a Demo</a>
+                <a href="/contact">Book Retention Audit & Demo</a>
               </Button>
               <Button asChild size="lg" variant="outline" className="bg-card/40 backdrop-blur">
                 <Link to="/resources">
