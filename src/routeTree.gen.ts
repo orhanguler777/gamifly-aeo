@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SportsbookGamificationUseCasesRouteImport } from './routes/sportsbook-gamification-use-cases'
 import { Route as IgamingGamificationVsCrmBonusCampaignsRouteImport } from './routes/igaming-gamification-vs-crm-bonus-campaigns'
 import { Route as GamiflyVsSmarticoRouteImport } from './routes/gamifly-vs-smartico'
 import { Route as GamiflyVsFutureAnthemRouteImport } from './routes/gamifly-vs-future-anthem'
@@ -18,6 +19,12 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
 import { Route as ResourcesSlugRouteImport } from './routes/resources_.$slug'
 
+const SportsbookGamificationUseCasesRoute =
+  SportsbookGamificationUseCasesRouteImport.update({
+    id: '/sportsbook-gamification-use-cases',
+    path: '/sportsbook-gamification-use-cases',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IgamingGamificationVsCrmBonusCampaignsRoute =
   IgamingGamificationVsCrmBonusCampaignsRouteImport.update({
     id: '/igaming-gamification-vs-crm-bonus-campaigns',
@@ -68,6 +75,7 @@ export interface FileRoutesByFullPath {
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
+  '/sportsbook-gamification-use-cases': typeof SportsbookGamificationUseCasesRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
 }
@@ -78,6 +86,7 @@ export interface FileRoutesByTo {
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
+  '/sportsbook-gamification-use-cases': typeof SportsbookGamificationUseCasesRoute
   '/resources/$slug': typeof ResourcesSlugRoute
   '/resources': typeof ResourcesIndexRoute
 }
@@ -89,6 +98,7 @@ export interface FileRoutesById {
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
+  '/sportsbook-gamification-use-cases': typeof SportsbookGamificationUseCasesRoute
   '/resources_/$slug': typeof ResourcesSlugRoute
   '/resources/': typeof ResourcesIndexRoute
 }
@@ -101,6 +111,7 @@ export interface FileRouteTypes {
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
     | '/igaming-gamification-vs-crm-bonus-campaigns'
+    | '/sportsbook-gamification-use-cases'
     | '/resources/$slug'
     | '/resources/'
   fileRoutesByTo: FileRoutesByTo
@@ -111,6 +122,7 @@ export interface FileRouteTypes {
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
     | '/igaming-gamification-vs-crm-bonus-campaigns'
+    | '/sportsbook-gamification-use-cases'
     | '/resources/$slug'
     | '/resources'
   id:
@@ -121,6 +133,7 @@ export interface FileRouteTypes {
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
     | '/igaming-gamification-vs-crm-bonus-campaigns'
+    | '/sportsbook-gamification-use-cases'
     | '/resources_/$slug'
     | '/resources/'
   fileRoutesById: FileRoutesById
@@ -132,12 +145,20 @@ export interface RootRouteChildren {
   GamiflyVsFutureAnthemRoute: typeof GamiflyVsFutureAnthemRoute
   GamiflyVsSmarticoRoute: typeof GamiflyVsSmarticoRoute
   IgamingGamificationVsCrmBonusCampaignsRoute: typeof IgamingGamificationVsCrmBonusCampaignsRoute
+  SportsbookGamificationUseCasesRoute: typeof SportsbookGamificationUseCasesRoute
   ResourcesSlugRoute: typeof ResourcesSlugRoute
   ResourcesIndexRoute: typeof ResourcesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sportsbook-gamification-use-cases': {
+      id: '/sportsbook-gamification-use-cases'
+      path: '/sportsbook-gamification-use-cases'
+      fullPath: '/sportsbook-gamification-use-cases'
+      preLoaderRoute: typeof SportsbookGamificationUseCasesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/igaming-gamification-vs-crm-bonus-campaigns': {
       id: '/igaming-gamification-vs-crm-bonus-campaigns'
       path: '/igaming-gamification-vs-crm-bonus-campaigns'
@@ -205,6 +226,7 @@ const rootRouteChildren: RootRouteChildren = {
   GamiflyVsSmarticoRoute: GamiflyVsSmarticoRoute,
   IgamingGamificationVsCrmBonusCampaignsRoute:
     IgamingGamificationVsCrmBonusCampaignsRoute,
+  SportsbookGamificationUseCasesRoute: SportsbookGamificationUseCasesRoute,
   ResourcesSlugRoute: ResourcesSlugRoute,
   ResourcesIndexRoute: ResourcesIndexRoute,
 }
