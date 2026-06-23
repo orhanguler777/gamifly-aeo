@@ -136,31 +136,31 @@ const integrationSteps = [
 
 const caseStudies = [
   {
-    metric: "+28%",
-    label: "30-Day Retention Uplift",
-    operatorType: "Tier-1 European Sportsbook",
-    headline: "How a Tier-1 European Sportsbook Achieved a +28% Uplift in 30-Day Player Retention",
-    challenge: "High player acquisition costs (CAC) paired with rapid churn immediately following signup promotions.",
-    solution: "Integrated Gamifly to launch personalized 'Weekly Bet Tournaments' and 'Live Bet Builder Missions' that reward engagement over transaction.",
-    result: "Achieved a +28% lift in 30-day retention cohorts and a +19% increase in average weekly session frequency."
+    metric: "-32%",
+    label: "Bonus Spend Reduction",
+    operatorType: "Tier-1 Sportsbook Operator",
+    headline: "How a Tier-1 Sportsbook Reduced Bonus Spend by 32% While Boosting Player Retention",
+    challenge: "Margin erosion due to high player bonus dependency coupled with a 65% churn rate after signup campaigns.",
+    solution: "Swapped raw push bonuses with Gamifly's auto-triggered sports quests and tournament-based loyalty tokens.",
+    result: "Slashed monthly bonus spend by 32% while generating a +28% uplift in 30-day player retention cohorts."
   },
   {
-    metric: "+40%",
-    label: "Higher Quest Completion",
-    operatorType: "Fast-Growing LatAm Casino",
-    headline: "How a Fast-Growing LatAm Casino Brand Generated 40% Higher Quest Completion & +15% ARPU",
-    challenge: "Stagnant player lifetime value (LTV) and low cross-product migration from classic slots to live dealer tables.",
-    solution: "Deployed unified 'Live Casino Quests' and an automated Rewards Shop where points earned on slots could be redeemed for live casino chips.",
-    result: "Drove 40% higher quest completion rates, alongside a +15% increase in Average Revenue Per User (ARPU)."
+    metric: "-24%",
+    label: "VIP Churn Reduction",
+    operatorType: "LatAm Casino Brand",
+    headline: "How a LatAm Casino Operator Cut VIP Churn by 24% & Multiplied Lifetime Value",
+    challenge: "High attrition rates among VIP players and heavy resource drain from manual CRM segment management.",
+    solution: "Implemented Gamifly's AI-managed automated progression layers and dynamic hands-free reward distribution.",
+    result: "Cut VIP segment churn by 24% within 60 days, yielding a 3.5× increase in player lifetime value (LTV)."
   },
   {
-    metric: "-22%",
-    label: "Reduction in Player Churn",
-    operatorType: "Multi-Brand Operator Group",
-    headline: "How a Multi-Brand Operator Group Reduced Player Churn by 22% via AI-Driven Journeys",
-    challenge: "High VIP segment churn rates and manual CRM marketing scheduling overhead.",
-    solution: "Used Gamifly's AI Personalization engine to automatically trigger real-time, behavior-based recovery campaigns and retention streaks.",
-    result: "Reduced player churn by 22% within 60 days, yielding a 3.5× increase in campaign conversion efficiency."
+    metric: "+18%",
+    label: "Cross-Product Play Rate",
+    operatorType: "Multi-Vertical Brand",
+    headline: "How a Multi-Vertical Brand Generated a +18% Increase in Cross-Product Play Rate",
+    challenge: "Siloed casino and sportsbook lobby engagement, resulting in low slots play from sports bettor segments.",
+    solution: "Launched unified quests linking sports bet milestones to slot free spins using a single real-time rewards wallet.",
+    result: "Drove an immediate +18% increase in cross-product play rate alongside a +15% lift in average revenue per user (ARPU)."
   }
 ];
 
