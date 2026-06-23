@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Trophy,
@@ -157,6 +158,175 @@ export const Route = createFileRoute("/resources/")({
   component: ResourcesPage,
 });
 
+function ROICalculator() {
+  const [mau, setMau] = useState(50000);
+  const [arpu, setArpu] = useState(100);
+  const [bonusRatio, setBonusRatio] = useState(25);
+  const [retention, setRetention] = useState(15);
+
+  // Calculations
+  const ggr = mau * arpu;
+  const bonusSpend = ggr * (bonusRatio / 100);
+  
+  // Assume relative 25% retention improvement (from e.g. 15% to 18.75%)
+  // Extra GGR retention lift assumes 40% of retained users deposit extra ARPU
+  const projectedGgrLift = ggr * ((retention * 0.25) / 100) * 0.40;
+  
+  // 15% reduction in direct bonus cost by swapping push bonuses with quest rewards
+  const savedBonusCost = bonusSpend * 0.15;
+  
+  const totalAnnualValue = (projectedGgrLift + savedBonusCost) * 12;
+
+  const formatCurrency = (val: number) => {
+    return new Intl.NumberFormat("en-DE", {
+      style: "currency",
+      currency: "EUR",
+      maximumFractionDigits: 0,
+    }).format(val);
+  };
+
+  return (
+    <section className="py-20 border-y border-border" aria-labelledby="roi-calc-title">
+      <div className="mb-12 text-center md:text-left">
+        <p className="text-sm font-medium uppercase tracking-wider text-primary">Interactive Tool</p>
+        <h2 id="roi-calc-title" className="mt-2 text-3xl font-bold md:text-4xl">
+          iGaming Gamification ROI Calculator
+        </h2>
+        <p className="mt-4 text-muted-foreground max-w-2xl">
+          Estimate the annual revenue lift and bonus margin savings you can unlock by replacing generic player bonuses with Gamifly's gamified retention loops.
+        </p>
+      </div>
+
+      <div className="grid gap-8 lg:grid-cols-12">
+        {/* Sliders */}
+        <div className="lg:col-span-7 space-y-6 rounded-2xl border border-border p-6 md:p-8 bg-card/40 backdrop-blur">
+          <h3 className="text-lg font-semibold text-foreground border-b border-border pb-3">Input Operator Metrics</h3>
+          
+          <div>
+            <div className="flex justify-between mb-2">
+              <label htmlFor="mau-input" className="text-sm font-medium text-muted-foreground">Monthly Active Users (MAU)</label>
+              <span className="text-sm font-semibold text-foreground">{mau.toLocaleString()}</span>
+            </div>
+            <input
+              id="mau-input"
+              type="range"
+              min="5000"
+              max="500000"
+              step="5000"
+              value={mau}
+              onChange={(e) => setMau(Number(e.target.value))}
+              className="w-full accent-primary bg-muted rounded-lg h-2 cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between mb-2">
+              <label htmlFor="arpu-input" className="text-sm font-medium text-muted-foreground">Average Monthly Deposit (ARPU)</label>
+              <span className="text-sm font-semibold text-foreground">{formatCurrency(arpu)}</span>
+            </div>
+            <input
+              id="arpu-input"
+              type="range"
+              min="10"
+              max="1000"
+              step="10"
+              value={arpu}
+              onChange={(e) => setArpu(Number(e.target.value))}
+              className="w-full accent-primary bg-muted rounded-lg h-2 cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between mb-2">
+              <label htmlFor="bonus-ratio-input" className="text-sm font-medium text-muted-foreground">Current Monthly Bonus/GGR Ratio</label>
+              <span className="text-sm font-semibold text-foreground">{bonusRatio}%</span>
+            </div>
+            <input
+              id="bonus-ratio-input"
+              type="range"
+              min="5"
+              max="50"
+              step="1"
+              value={bonusRatio}
+              onChange={(e) => setBonusRatio(Number(e.target.value))}
+              className="w-full accent-primary bg-muted rounded-lg h-2 cursor-pointer"
+            />
+          </div>
+
+          <div>
+            <div className="flex justify-between mb-2">
+              <label htmlFor="retention-input" className="text-sm font-medium text-muted-foreground">Current 30-Day Player Retention</label>
+              <span className="text-sm font-semibold text-foreground">{retention}%</span>
+            </div>
+            <input
+              id="retention-input"
+              type="range"
+              min="5"
+              max="40"
+              step="1"
+              value={retention}
+              onChange={(e) => setRetention(Number(e.target.value))}
+              className="w-full accent-primary bg-muted rounded-lg h-2 cursor-pointer"
+            />
+          </div>
+        </div>
+
+        {/* Results Card */}
+        <div 
+          className="lg:col-span-5 flex flex-col justify-between rounded-2xl border border-border p-6 md:p-8 relative overflow-hidden"
+          style={{ background: "var(--gradient-card)" }}
+        >
+          {/* subtle ambient glow */}
+          <div 
+            className="absolute -right-10 -bottom-10 w-40 h-40 rounded-full opacity-20 blur-3xl pointer-events-none"
+            style={{ background: "var(--gradient-brand)" }}
+          />
+
+          <div className="relative">
+            <h3 className="text-lg font-semibold text-foreground border-b border-border pb-3">Projected Annual Yield</h3>
+            
+            <div className="mt-6 space-y-4">
+              <div className="flex justify-between items-center py-2 border-b border-border/30">
+                <span className="text-sm text-muted-foreground">Annual Bonus Waste Saved</span>
+                <span className="text-base font-semibold text-emerald-400">+{formatCurrency(savedBonusCost * 12)}</span>
+              </div>
+              <div className="flex justify-between items-center py-2 border-b border-border/30">
+                <span className="text-sm text-muted-foreground">Annual Retention Revenue Uplift</span>
+                <span className="text-base font-semibold text-emerald-400">+{formatCurrency(projectedGgrLift * 12)}</span>
+              </div>
+            </div>
+
+            <div className="mt-8 text-center bg-background/50 rounded-xl p-4 border border-border/50">
+              <span className="text-xs uppercase tracking-wider text-muted-foreground font-semibold">Total Growth Potential</span>
+              <p 
+                className="text-3xl md:text-4xl font-extrabold mt-2 bg-clip-text text-transparent"
+                style={{ backgroundImage: "var(--gradient-brand)" }}
+              >
+                {formatCurrency(totalAnnualValue)}
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-8 relative z-10">
+            <Button
+              asChild
+              className="w-full border-0 text-primary-foreground shadow-[var(--shadow-glow)] py-6 text-sm font-semibold rounded-xl"
+              style={{ background: "var(--gradient-brand)" }}
+            >
+              <a href={`/contact?source=roi-calc&value=${Math.round(totalAnnualValue)}`}>
+                Claim Your Custom {formatCurrency(totalAnnualValue)} Blueprint
+              </a>
+            </Button>
+            <p className="text-[10px] text-muted-foreground text-center mt-3">
+              Calculations based on standard European and LatAm iGaming operator performance data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ResourcesPage() {
   return (
     <div className="dark min-h-screen bg-background text-foreground antialiased">
@@ -310,6 +480,8 @@ function ResourcesPage() {
             ))}
           </div>
         </section>
+
+        <ROICalculator />
 
         {/* Quick Answers for Operators — static HTML for SEO / AEO / GEO / LLM crawlers */}
         <section className="py-20" aria-labelledby="quick-answers">
