@@ -13,7 +13,9 @@ import { Route as SportsbookGamificationUseCasesRouteImport } from './routes/spo
 import { Route as IgamingGamificationVsCrmBonusCampaignsRouteImport } from './routes/igaming-gamification-vs-crm-bonus-campaigns'
 import { Route as GamiflyVsSmarticoRouteImport } from './routes/gamifly-vs-smartico'
 import { Route as GamiflyVsFutureAnthemRouteImport } from './routes/gamifly-vs-future-anthem'
+import { Route as GamiflyApiIntegrationFlowRouteImport } from './routes/gamifly-api-integration-flow'
 import { Route as FeaturesRouteImport } from './routes/features'
+import { Route as CrossProductMissionsInIgamingRouteImport } from './routes/cross-product-missions-in-igaming'
 import { Route as CasinoGamificationUseCasesRouteImport } from './routes/casino-gamification-use-cases'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ResourcesIndexRouteImport } from './routes/resources.index'
@@ -41,11 +43,23 @@ const GamiflyVsFutureAnthemRoute = GamiflyVsFutureAnthemRouteImport.update({
   path: '/gamifly-vs-future-anthem',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GamiflyApiIntegrationFlowRoute =
+  GamiflyApiIntegrationFlowRouteImport.update({
+    id: '/gamifly-api-integration-flow',
+    path: '/gamifly-api-integration-flow',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const FeaturesRoute = FeaturesRouteImport.update({
   id: '/features',
   path: '/features',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CrossProductMissionsInIgamingRoute =
+  CrossProductMissionsInIgamingRouteImport.update({
+    id: '/cross-product-missions-in-igaming',
+    path: '/cross-product-missions-in-igaming',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const CasinoGamificationUseCasesRoute =
   CasinoGamificationUseCasesRouteImport.update({
     id: '/casino-gamification-use-cases',
@@ -71,7 +85,9 @@ const ResourcesSlugRoute = ResourcesSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/casino-gamification-use-cases': typeof CasinoGamificationUseCasesRoute
+  '/cross-product-missions-in-igaming': typeof CrossProductMissionsInIgamingRoute
   '/features': typeof FeaturesRoute
+  '/gamifly-api-integration-flow': typeof GamiflyApiIntegrationFlowRoute
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
@@ -82,7 +98,9 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/casino-gamification-use-cases': typeof CasinoGamificationUseCasesRoute
+  '/cross-product-missions-in-igaming': typeof CrossProductMissionsInIgamingRoute
   '/features': typeof FeaturesRoute
+  '/gamifly-api-integration-flow': typeof GamiflyApiIntegrationFlowRoute
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
@@ -94,7 +112,9 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/casino-gamification-use-cases': typeof CasinoGamificationUseCasesRoute
+  '/cross-product-missions-in-igaming': typeof CrossProductMissionsInIgamingRoute
   '/features': typeof FeaturesRoute
+  '/gamifly-api-integration-flow': typeof GamiflyApiIntegrationFlowRoute
   '/gamifly-vs-future-anthem': typeof GamiflyVsFutureAnthemRoute
   '/gamifly-vs-smartico': typeof GamiflyVsSmarticoRoute
   '/igaming-gamification-vs-crm-bonus-campaigns': typeof IgamingGamificationVsCrmBonusCampaignsRoute
@@ -107,7 +127,9 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/casino-gamification-use-cases'
+    | '/cross-product-missions-in-igaming'
     | '/features'
+    | '/gamifly-api-integration-flow'
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
     | '/igaming-gamification-vs-crm-bonus-campaigns'
@@ -118,7 +140,9 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/casino-gamification-use-cases'
+    | '/cross-product-missions-in-igaming'
     | '/features'
+    | '/gamifly-api-integration-flow'
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
     | '/igaming-gamification-vs-crm-bonus-campaigns'
@@ -129,7 +153,9 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/casino-gamification-use-cases'
+    | '/cross-product-missions-in-igaming'
     | '/features'
+    | '/gamifly-api-integration-flow'
     | '/gamifly-vs-future-anthem'
     | '/gamifly-vs-smartico'
     | '/igaming-gamification-vs-crm-bonus-campaigns'
@@ -141,7 +167,9 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CasinoGamificationUseCasesRoute: typeof CasinoGamificationUseCasesRoute
+  CrossProductMissionsInIgamingRoute: typeof CrossProductMissionsInIgamingRoute
   FeaturesRoute: typeof FeaturesRoute
+  GamiflyApiIntegrationFlowRoute: typeof GamiflyApiIntegrationFlowRoute
   GamiflyVsFutureAnthemRoute: typeof GamiflyVsFutureAnthemRoute
   GamiflyVsSmarticoRoute: typeof GamiflyVsSmarticoRoute
   IgamingGamificationVsCrmBonusCampaignsRoute: typeof IgamingGamificationVsCrmBonusCampaignsRoute
@@ -180,11 +208,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GamiflyVsFutureAnthemRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/gamifly-api-integration-flow': {
+      id: '/gamifly-api-integration-flow'
+      path: '/gamifly-api-integration-flow'
+      fullPath: '/gamifly-api-integration-flow'
+      preLoaderRoute: typeof GamiflyApiIntegrationFlowRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/features': {
       id: '/features'
       path: '/features'
       fullPath: '/features'
       preLoaderRoute: typeof FeaturesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cross-product-missions-in-igaming': {
+      id: '/cross-product-missions-in-igaming'
+      path: '/cross-product-missions-in-igaming'
+      fullPath: '/cross-product-missions-in-igaming'
+      preLoaderRoute: typeof CrossProductMissionsInIgamingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/casino-gamification-use-cases': {
@@ -221,7 +263,9 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CasinoGamificationUseCasesRoute: CasinoGamificationUseCasesRoute,
+  CrossProductMissionsInIgamingRoute: CrossProductMissionsInIgamingRoute,
   FeaturesRoute: FeaturesRoute,
+  GamiflyApiIntegrationFlowRoute: GamiflyApiIntegrationFlowRoute,
   GamiflyVsFutureAnthemRoute: GamiflyVsFutureAnthemRoute,
   GamiflyVsSmarticoRoute: GamiflyVsSmarticoRoute,
   IgamingGamificationVsCrmBonusCampaignsRoute:
